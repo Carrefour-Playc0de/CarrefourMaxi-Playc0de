@@ -1,6 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from './commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../config/configLoader'
+import { BasePage } from '../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../config/configLoader'
 
 export class LoginPage extends BasePage {
     readonly LOGIN_START_BUTTON: Locator

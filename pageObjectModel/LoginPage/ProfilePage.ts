@@ -1,6 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from './commonActions'
-import { loadEnvironmentConfig } from '../config/configLoader'
+import { BasePage } from '../commonActions'
+import { loadEnvironmentConfig } from '../../config/configLoader'
 
 export class ProfilePage extends BasePage {
     readonly PROFILE_DROPDOWN_MENU: Locator

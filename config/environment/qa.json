@@ -1,5 +1,12 @@
 {
-    "baseURL": "https://underc0de.org/foro",
-    "username": "test.playc0de@gmail.com",
-    "password": "@Underc0de"
+    "baseURL": "https://maxi.carrefour.com.ar/online/?utm_source=google&utm_medium=search&utm_campaign=ecommerce&utm_content=maxi&utm_term=generica&gad_source=1",
+    "username": "mauricio_roh@carrefour.com",
+    "password": "Underc0de",
+    "data": {
+        "name": "",
+        "lastName": "",
+        "birthdate": "",
+        "adress": "",
+        "city": ""
+    }
 }
