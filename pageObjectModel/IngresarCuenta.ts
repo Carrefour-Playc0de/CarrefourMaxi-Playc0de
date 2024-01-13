@@ -2,9 +2,9 @@ import { Page, BrowserContext, Locator, expect } from '@playwright/test'
 import { BasePage } from './commonActions'
 import { loadEnvironmentConfig, loadTestDataConfig } from '../config/configLoader'
 
-export class CerrarModalTeDamosBienvenida extends BasePage {
+export class IngresarCuenta extends BasePage {
 
-    readonly CRUZ: Locator
+    readonly ICONO_INGRESAR: Locator
 
     private env: any
 
@@ -12,20 +12,15 @@ export class CerrarModalTeDamosBienvenida extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.CRUZ = this.page.locator('//img [@class="btn_access__img1 w-img cursor_pointer"]')
+        this.ICONO_INGRESAR = this.page.locator("//span[normalize-space()='Ingresar']")
     }
-
-    async MainPage(): Promise<void> {
-        await this.goto(this.env.baseURL)
+    async clickIconoIngresarCuenta(): Promise<void> {
+        await this.click(this.ICONO_INGRESAR)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
     }
-    async clickXModalTeDamosBienvenida(): Promise<void> {
-        await this.click(this.CRUZ)
-    }
 
-    async navigateToMainPageAndCerrarModalTeDamosBienvenida(): Promise<void> {
-        await this.MainPage()
-        await this.clickXModalTeDamosBienvenida()
+    async navigateToIngresarCuenta(): Promise<void> {
+        await this.clickIconoIngresarCuenta()
     }
 }
