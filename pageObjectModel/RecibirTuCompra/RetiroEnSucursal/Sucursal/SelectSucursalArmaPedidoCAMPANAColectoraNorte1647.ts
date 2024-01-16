@@ -12,10 +12,12 @@ export class SelectSucursalArmaPedidoCAMPANAColectoraNorte1647 extends BasePage 
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.SUCURSAL_ARMA_PEDIDO_CAMPANA = this.page.locator("//option[@value='232']")
+        // this.SUCURSAL_ARMA_PEDIDO_CAMPANA = this.page.locator("//option[@value='232']")
+
+        this.SUCURSAL_ARMA_PEDIDO_CAMPANA = this.page.locator('//select [@id="seller"]')
     }
     async clickSelectSucursalArmaPedidoCAMPANAColectoraNorte1647(): Promise<void> {
-        await this.click(this.SUCURSAL_ARMA_PEDIDO_CAMPANA)
+        await this.selectOption(this.SUCURSAL_ARMA_PEDIDO_CAMPANA, '232')
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
     }

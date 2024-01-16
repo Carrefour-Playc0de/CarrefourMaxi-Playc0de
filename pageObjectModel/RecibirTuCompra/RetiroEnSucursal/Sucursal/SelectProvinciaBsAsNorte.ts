@@ -12,12 +12,14 @@ export class SelectProvinciaBsAsNorte extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.PROVINCIA_BS_AS_NORTE = this.page.locator("//option[@value='BS AS (NORTE)']")
+        // this.PROVINCIA_BS_AS_NORTE = this.page.locator("//option[@value='BS AS (NORTE)']")
+        this.PROVINCIA_BS_AS_NORTE = this.page.locator('//select [@id="region"]')
     }
     async clickSelectProvinciaBsAsNorte(): Promise<void> {
-        await this.click(this.PROVINCIA_BS_AS_NORTE)
+        await this.selectOption(this.PROVINCIA_BS_AS_NORTE, 'BS AS (NORTE)')
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToSelectProvinciaBsAsNorte(): Promise<void> {
