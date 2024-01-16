@@ -15,7 +15,7 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetir
     })
 })
 
-test('@Smoke @Regression @Login (TS-05) Verificar que al clickear el select Sucursal que Arma Tu Pedido funciona correctamente', async ({selectSucursalArmaPedido}) => {
+test('@Retiro @Regression (TS-05) Verificar que al clickear el select Sucursal que Arma Tu Pedido funciona correctamente', async ({selectSucursalArmaPedido}) => {
 
     await test.step('Click en el select Sucursal que Arma Tu Pedido', async () => {
         await selectSucursalArmaPedido.navigateToSelectSucursalArmaPedido()

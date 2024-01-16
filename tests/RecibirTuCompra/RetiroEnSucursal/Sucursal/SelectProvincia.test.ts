@@ -15,7 +15,7 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetir
     })
 })
 
-test('@Smoke @Regression @Login (TS-04) Verificar que al clickear el select Provincia funciona correctamente', async ({selectProvincia}) => {
+test('@Retiro @Regression (TS-04) Verificar que al clickear el select Provincia funciona correctamente', async ({selectProvincia}) => {
 
     await test.step('Click en el select Provincia', async () => {
         await selectProvincia.navigateToSelectProvincia()
