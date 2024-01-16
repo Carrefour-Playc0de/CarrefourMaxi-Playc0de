@@ -19,12 +19,12 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetir
     await test.step('Click en el select Provincia en BS AS (NORTE)', async () => {
         await selectProvinciaBsAsNorte.navigateToSelectProvinciaBsAsNorte()
     })
-    await test.step('Click en el select Sucursal que Arma Tu Pedido', async () => {
-        await selectSucursalArmaPedido.navigateToSelectSucursalArmaPedido()
-    })
+    // await test.step('Click en el select Sucursal que Arma Tu Pedido', async () => {
+    //     await selectSucursalArmaPedido.navigateToSelectSucursalArmaPedido()
+    // })
 })
 
-test('@Retiro @Regression (TS-29) Verificar que al clickear el select Sucursal que Arma Tu Pedido en CAMPANA Colectora Norte 1647 funciona correctamente', async ({selectSucursalArmaPedidoCAMPANAColectoraNorte1647}) => {
+test('@Test @Retiro @Regression (TS-29) Verificar que al clickear el select Sucursal que Arma Tu Pedido en CAMPANA Colectora Norte 1647 funciona correctamente', async ({selectSucursalArmaPedidoCAMPANAColectoraNorte1647}) => {
 
     await test.step('Click en CAMPANA Colectora Norte 1647', async () => {
         await selectSucursalArmaPedidoCAMPANAColectoraNorte1647.navigateToSelectSucursalArmaPedidoCAMPANAColectoraNorte1647()

@@ -13,12 +13,12 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetir
     await test.step('Click en el boton CONFIRMAR en el modal Como queres recibir tu compra', async () => {
         await botonConfirmarRecibirTuCompra.navigateToBotonConfirmarRecibirTuCompra()
     })
-    await test.step('Click en el select Provincia', async () => {
-        await selectProvincia.navigateToSelectProvincia()
-    })
+    // await test.step('Click en el select Provincia', async () => {
+    //     await selectProvincia.navigateToSelectProvincia()
+    // })
 })
 
-test('@Retiro @Regression (TS-05) Verificar que al clickear el select Provincia en BS AS (NORTE) funciona correctamente', async ({selectProvinciaBsAsNorte}) => {
+test('@Test @Retiro @Regression (TS-05) Verificar que al clickear el select Provincia en BS AS (NORTE) funciona correctamente', async ({selectProvinciaBsAsNorte}) => {
     await test.step('Click en el select Provincia en BS AS (NORTE)', async () => {
         await selectProvinciaBsAsNorte.navigateToSelectProvinciaBsAsNorte()
     })
