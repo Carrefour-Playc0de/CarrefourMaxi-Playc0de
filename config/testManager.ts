@@ -72,6 +72,9 @@ import {
     SelectSucursalArmaPedidoCAMPANAColectoraNorte1647
 } from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectSucursalArmaPedidoCAMPANAColectoraNorte1647'
 import { BotonConfirmar } from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/BotonConfirmar'
+import {
+    ModalIngresaTusDatos
+} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/IngresaTusDatos/ModalIngresaTusDatos'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -109,6 +112,7 @@ const test = baseTest.extend<{
     selectProvinciaTucuman: SelectProvinciaTucuman
     selectSucursalArmaPedidoCAMPANAColectoraNorte1647: SelectSucursalArmaPedidoCAMPANAColectoraNorte1647
     botonConfirmar: BotonConfirmar
+    modalIngresaTusDatos: ModalIngresaTusDatos
 
 }>({
     // LOGIN PAGE
@@ -126,12 +130,7 @@ const test = baseTest.extend<{
     },
 
 
-    selectSucursalArmaPedidoCAMPANAColectoraNorte1647: async ({ page, context }, use) => {
-        await use(new SelectSucursalArmaPedidoCAMPANAColectoraNorte1647(page, context, environment))
-    },
-    botonConfirmar: async ({ page, context }, use) => {
-        await use(new BotonConfirmar(page, context, environment))
-    },
+
 
 
 
@@ -217,6 +216,15 @@ const test = baseTest.extend<{
     },
     selectProvinciaTucuman: async ({ page, context }, use) => {
         await use(new SelectProvinciaTucuman(page, context, environment))
+    },
+    selectSucursalArmaPedidoCAMPANAColectoraNorte1647: async ({ page, context }, use) => {
+        await use(new SelectSucursalArmaPedidoCAMPANAColectoraNorte1647(page, context, environment))
+    },
+    botonConfirmar: async ({ page, context }, use) => {
+        await use(new BotonConfirmar(page, context, environment))
+    },
+    modalIngresaTusDatos: async ({ page, context }, use) => {
+        await use(new ModalIngresaTusDatos(page, context, environment))
     },
 
 

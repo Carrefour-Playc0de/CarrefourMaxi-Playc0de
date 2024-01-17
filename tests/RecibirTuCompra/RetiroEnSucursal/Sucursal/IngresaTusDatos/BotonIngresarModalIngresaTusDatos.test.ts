@@ -1,6 +1,6 @@
-import test from '../../../../config/testManager'
+import test from '../../../../../config/testManager'
 
-test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetiroEnSucursal, botonConfirmarRecibirTuCompra, selectProvinciaBsAsNorte}) => {
+test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetiroEnSucursal, botonConfirmarRecibirTuCompra, selectProvinciaBsAsNorte, selectSucursalArmaPedidoCAMPANAColectoraNorte1647, botonConfirmar}) => {
     await test.step('Click en la X del modal Te Damos la Bienvenida', async () => {
         await cerrarModalTeDamosBienvenida.navigateToMainPageAndCerrarModalTeDamosBienvenida();
     })
@@ -16,12 +16,17 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetir
     await test.step('Click en el select Provincia en BS AS (NORTE)', async () => {
         await selectProvinciaBsAsNorte.navigateToSelectProvinciaBsAsNorte()
     })
-})
-
-test('@Retiro @Regression (TS-29) Verificar que al clickear el select Sucursal que Arma Tu Pedido en CAMPANA Colectora Norte 1647 funciona correctamente', async ({selectSucursalArmaPedidoCAMPANAColectoraNorte1647}) => {
-
     await test.step('Click en CAMPANA Colectora Norte 1647', async () => {
         await selectSucursalArmaPedidoCAMPANAColectoraNorte1647.navigateToSelectSucursalArmaPedidoCAMPANAColectoraNorte1647()
+    })
+    await test.step('Click en boton CONFIRMAR', async () => {
+        await botonConfirmar.navigateToBotonConfirmar()
+    })
+})
+
+test('@Test @Retiro @Regression (TS-30) Verificar que al clickear el boton INGRESAR para confirmar los datos del modal Ingresa tus datos funciona correctamente', async ({modalIngresaTusDatos}) => {
+    await test.step('Click en boton INGRESAR', async () => {
+        await modalIngresaTusDatos.navigateToModalIngresaTusDatos()
     })
 })
 

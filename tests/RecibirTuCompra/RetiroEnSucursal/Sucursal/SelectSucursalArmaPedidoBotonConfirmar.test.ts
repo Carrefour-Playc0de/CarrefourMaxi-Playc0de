@@ -21,7 +21,7 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetir
     })
 })
 
-test('@Test @Retiro @Regression (TS-29) Verificar que al clickear el boton CONFIRMAR del modal Sucursal funciona correctamente', async ({botonConfirmar}) => {
+test('@Retiro @Regression (TS-29) Verificar que al clickear el boton CONFIRMAR del modal Sucursal funciona correctamente', async ({botonConfirmar}) => {
 
     await test.step('Click en boton CONFIRMAR', async () => {
         await botonConfirmar.navigateToBotonConfirmar()
