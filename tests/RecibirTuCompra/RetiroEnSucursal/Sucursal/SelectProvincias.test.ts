@@ -1,6 +1,6 @@
 import test from '../../../../config/testManager'
 
-test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetiroEnSucursal, botonConfirmarRecibirTuCompra, selectProvincia}) => {
+test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetiroEnSucursal, botonConfirmarRecibirTuCompra}) => {
     await test.step('Click en la X del modal Te Damos la Bienvenida', async () => {
         await cerrarModalTeDamosBienvenida.navigateToMainPageAndCerrarModalTeDamosBienvenida();
     })
@@ -13,9 +13,6 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetir
     await test.step('Click en el boton CONFIRMAR en el modal Como queres recibir tu compra', async () => {
         await botonConfirmarRecibirTuCompra.navigateToBotonConfirmarRecibirTuCompra()
     })
-    // await test.step('Click en el select Provincia', async () => {
-    //     await selectProvincia.navigateToSelectProvincia()
-    // })
 })
 
 test('@Test @Retiro @Regression (TS-05) Verificar que al clickear el select Provincia en BS AS (NORTE) funciona correctamente', async ({selectProvinciaBsAsNorte}) => {

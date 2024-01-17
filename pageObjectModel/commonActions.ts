@@ -94,29 +94,4 @@ export class BasePage {
         await this.context.close()
     }
 
-
-    // New Actions
-    // protected async xpathSelectProvincia(): Promise<void> {
-    //
-    //     try {
-    //         await this.page.locator("//select [@id='region']")
-    //         // if (delayMilliseconds !== undefined) {
-    //         //     await this.page.waitForTimeout(delayMilliseconds)
-    //         // }
-    //     } catch (error) {
-    //         logger.error(`Error occurred while unchecking element: Select Provincia : ${error}`)
-    //     }
-    // }
-    //
-    // protected async xpathSelectSucursalArmaPedido(): Promise<void> {
-    //
-    //     try {
-    //         await this.page.locator("//select [@id='seller']")
-    //         // if (delayMilliseconds !== undefined) {
-    //         //     await this.page.waitForTimeout(delayMilliseconds)
-    //         // }
-    //     } catch (error) {
-    //         logger.error(`Error occurred while unchecking element: Select Sucursal Arma Tu Pedido : ${error}`)
-    //     }
-    // }
 }

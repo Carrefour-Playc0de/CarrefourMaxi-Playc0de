@@ -4,10 +4,6 @@ import { CerrarModalTeDamosBienvenida } from '../pageObjectModel/CerrarModalTeDa
 import { IngresarCuenta } from '../pageObjectModel/IngresarCuenta'
 import { BotonRetiroEnSucursal } from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/BotonRetiroEnSucursal'
 import { BotonConfirmarRecibirTuCompra } from '../pageObjectModel/RecibirTuCompra/BotonConfirmarRecibirTuCompra'
-import { SelectProvincia } from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvincia'
-import {
-    SelectSucursalArmaPedido
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectSucursalArmaPedido'
 import {
     SelectProvinciaBsAsNorte
 } from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaBsAsNorte'
@@ -87,8 +83,6 @@ const test = baseTest.extend<{
     ingresarCuenta: IngresarCuenta
     botonRetiroEnSucursal: BotonRetiroEnSucursal
     botonConfirmarRecibirTuCompra: BotonConfirmarRecibirTuCompra
-    selectProvincia: SelectProvincia
-    selectSucursalArmaPedido: SelectSucursalArmaPedido
     selectProvinciaBsAsNorte: SelectProvinciaBsAsNorte
     selectProvinciaBsAsOeste: SelectProvinciaBsAsOeste
     selectProvinciaBsAsSur: SelectProvinciaBsAsSur
@@ -151,9 +145,6 @@ const test = baseTest.extend<{
     },
     botonConfirmarRecibirTuCompra: async ({ page, context }, use) => {
         await use(new BotonConfirmarRecibirTuCompra(page, context, environment))
-    },
-    selectProvincia: async ({ page, context }, use) => {
-        await use(new SelectProvincia(page, context, environment))
     },
     selectProvinciaBsAsNorte: async ({ page, context }, use) => {
         await use(new SelectProvinciaBsAsNorte(page, context, environment))
@@ -231,9 +222,7 @@ const test = baseTest.extend<{
 
 
 
-    selectSucursalArmaPedido: async ({ page, context }, use) => {
-        await use(new SelectSucursalArmaPedido(page, context, environment))
-    },
+
 
 
 
