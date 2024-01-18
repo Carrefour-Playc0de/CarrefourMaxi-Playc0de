@@ -19,6 +19,7 @@ export class MenuHamburAlmacenEnlatadosConservas extends BasePage {
         await this.click(this.ENLATADOS_CONSERVAS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburAlmacenEnlatadosConservas(): Promise<void> {

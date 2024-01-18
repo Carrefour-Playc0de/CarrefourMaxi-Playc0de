@@ -19,6 +19,7 @@ export class MenuHamburAlmacenCaldosSopasPure extends BasePage {
         await this.click(this.CALDOS_SOPAS_PURE)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburAlmacenCaldosSopasPure(): Promise<void> {

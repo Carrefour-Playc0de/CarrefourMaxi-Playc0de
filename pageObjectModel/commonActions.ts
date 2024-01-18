@@ -94,4 +94,15 @@ export class BasePage {
         await this.context.close()
     }
 
+    // NEW ACTIONS
+    protected async waitForSelector(value: string, delayMilliseconds?: number): Promise<void> {
+        try {
+            await this.page.waitForSelector(value)
+            if (delayMilliseconds !== undefined) {
+                await this.page.waitForTimeout(delayMilliseconds)
+            }
+        } catch (error) {
+            logger.error(`Error occurred while pressing keys ${value} on the element: ${error}`)
+        }
+    }
 }

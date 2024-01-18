@@ -33,6 +33,7 @@ export class LoginPage extends BasePage {
     async fillCredentials(): Promise<void> {
         await this.fill(this.USERNAME_INPUT, this.env.username)
         await this.fill(this.PASSWORD_INPUT, this.env.password)
+        // await this.page.waitForTimeout(3000)
     }
 
     async endLoginProcess(): Promise<void> {

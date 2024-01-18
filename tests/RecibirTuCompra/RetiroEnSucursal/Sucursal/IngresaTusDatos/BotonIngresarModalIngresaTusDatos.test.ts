@@ -24,7 +24,7 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetir
     })
 })
 
-test('@Test @Retiro @Regression (TS-30) Verificar que al clickear el boton INGRESAR para confirmar los datos del modal Ingresa tus datos funciona correctamente', async ({modalIngresaTusDatos}) => {
+test('@Retiro @Regression (TS-30) Verificar que al clickear el boton INGRESAR para confirmar los datos del modal Ingresa tus datos funciona correctamente', async ({modalIngresaTusDatos}) => {
     await test.step('Click en boton INGRESAR', async () => {
         await modalIngresaTusDatos.navigateToModalIngresaTusDatos()
     })

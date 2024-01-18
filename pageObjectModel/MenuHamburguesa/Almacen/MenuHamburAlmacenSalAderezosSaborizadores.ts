@@ -19,6 +19,7 @@ export class MenuHamburAlmacenSalAderezosSaborizadores extends BasePage {
         await this.click(this.SAL_ADEREZOS_SABORIZADORES)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburAlmacenSalAderezosSaborizadores(): Promise<void> {

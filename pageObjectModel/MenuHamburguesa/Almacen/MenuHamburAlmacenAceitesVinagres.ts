@@ -19,6 +19,7 @@ export class MenuHamburguesaAlmacenAceitesVinagres extends BasePage {
         await this.click(this.ACEITES_VINAGRES)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburAlmacenAceitesVinagres(): Promise<void> {
