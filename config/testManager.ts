@@ -1,117 +1,126 @@
 import { test as baseTest } from '@playwright/test'
 // import { LoginPage } from '../pageObjectModel/LoginPage/LoginPage'
-import { CerrarModalTeDamosBienvenida } from '../pageObjectModel/CerrarModalTeDamosBienvenida'
-import { IngresarCuenta } from '../pageObjectModel/IngresarCuenta'
-import { BotonRetiroEnSucursal } from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/BotonRetiroEnSucursal'
-import { BotonConfirmarRecibirTuCompra } from '../pageObjectModel/RecibirTuCompra/BotonConfirmarRecibirTuCompra'
+import { CerrarModalTeDamosBienvenida } from '../pageObjectModel/MaxiOnLine/CerrarModalTeDamosBienvenida'
+import { IngresarCuenta } from '../pageObjectModel/MaxiOnLine/IngresarCuenta'
+import { BotonRetiroEnSucursal } from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/BotonRetiroEnSucursal'
+import { BotonConfirmarRecibirTuCompra } from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/BotonConfirmarRecibirTuCompra'
 import {
     SelectProvinciaBsAsNorte
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaBsAsNorte'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaBsAsNorte'
 import {
     SelectProvinciaBsAsOeste
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaBsAsOeste'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaBsAsOeste'
 import {
     SelectProvinciaBsAsSur
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaBsAsSur'
-import { SelectProvinciaCABA } from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaCABA'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaBsAsSur'
+import { SelectProvinciaCABA } from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaCABA'
 import {
     SelectProvinciaCatamarca
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaCatamarca'
-import { SelectProvinciaChaco } from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaChaco'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaCatamarca'
+import { SelectProvinciaChaco } from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaChaco'
 import {
     SelectProvinciaChubut
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaChubut'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaChubut'
 import {
     SelectProvinciaCordoba
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaCordoba'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaCordoba'
 import {
     SelectProvinciaCorrientes
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaCorrientes'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaCorrientes'
 import {
     SelectProvinciaEntreRios
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaEntreRios'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaEntreRios'
 import {
     SelectProvinciaFormosa
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaFormosa'
-import { SelectProvinciaJujuy } from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaJujuy'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaFormosa'
+import { SelectProvinciaJujuy } from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaJujuy'
 import {
     SelectProvinciaLaPampa
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaLaPampa'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaLaPampa'
 import {
     SelectProvinciaLaRioja
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaLaRioja'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaLaRioja'
 import {
     SelectProvinciaMendoza
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaMendoza'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaMendoza'
 import {
     SelectProvinciaNeuquen
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaNeuquen'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaNeuquen'
 import {
     SelectProvinciaRioNegro
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaRioNegro'
-import { SelectProvinciaSalta } from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaSalta'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaRioNegro'
+import { SelectProvinciaSalta } from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaSalta'
 import {
     SelectProvinciaSanJuan
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaSanJuan'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaSanJuan'
 import {
     SelectProvinciaSanLuis
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaSanLuis'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaSanLuis'
 import {
     SelectProvinciaSantaCruz
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaSantaCruz'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaSantaCruz'
 import {
     SelectProvinciaSantaFe
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaSantaFe'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaSantaFe'
 import {
     SelectProvinciaTierraDelFuego
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaTierraDelFuego'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaTierraDelFuego'
 import {
     SelectProvinciaTucuman
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaTucuman'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectProvinciaTucuman'
 import {
     SelectSucursalArmaPedidoCAMPANAColectoraNorte1647
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectSucursalArmaPedidoCAMPANAColectoraNorte1647'
-import { BotonConfirmar } from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/BotonConfirmar'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/SelectSucursalArmaPedidoCAMPANAColectoraNorte1647'
+import { BotonConfirmar } from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/BotonConfirmar'
 import {
     ModalIngresaTusDatos
-} from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/IngresaTusDatos/ModalIngresaTusDatos'
-import { MenuHamburguesa } from '../pageObjectModel/MenuHamburguesa/MenuHambur'
-import { MenuHamburAlmacen } from '../pageObjectModel/MenuHamburguesa/MenuHamburAlmacen'
-import { MenuHamburBazarTextil } from '../pageObjectModel/MenuHamburguesa/MenuHamburBazarTextil'
-import { MenuHamburBebidas } from '../pageObjectModel/MenuHamburguesa/MenuHamburBebidas'
-import { MenuHamburDesayunoMerienda } from '../pageObjectModel/MenuHamburguesa/MenuHamburDesayunoMerienda'
-import { MenuHamburLacteosProdsFrescos } from '../pageObjectModel/MenuHamburguesa/MenuHamburLacteosProdsFrescos'
-import { MenuHamburLimpieza } from '../pageObjectModel/MenuHamburguesa/MenuHamburLimpieza'
-import { MenuHamburMascotas } from '../pageObjectModel/MenuHamburguesa/MenuHamburMascotas'
-import { MenuHamburMundoBebe } from '../pageObjectModel/MenuHamburguesa/MenuHamburMundoBebe'
-import { MenuHamburPanaderia } from '../pageObjectModel/MenuHamburguesa/MenuHamburPanaderia'
-import { MenuHamburPerfumeria } from '../pageObjectModel/MenuHamburguesa/MenuHamburPerfumeria'
-import { MenuHamburAlmacenVerTodo } from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenVerTodo'
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/RetiroEnSucursal/Sucursal/IngresaTusDatos/ModalIngresaTusDatos'
+import { MenuHamburguesa } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/MenuHambur'
+import { MenuHamburAlmacen } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/MenuHamburAlmacen'
+import { MenuHamburBazarTextil } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/MenuHamburBazarTextil'
+import { MenuHamburBebidas } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/MenuHamburBebidas'
+import { MenuHamburDesayunoMerienda } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/MenuHamburDesayunoMerienda'
+import { MenuHamburLacteosProdsFrescos } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/MenuHamburLacteosProdsFrescos'
+import { MenuHamburLimpieza } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/MenuHamburLimpieza'
+import { MenuHamburMascotas } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/MenuHamburMascotas'
+import { MenuHamburMundoBebe } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/MenuHamburMundoBebe'
+import { MenuHamburPanaderia } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/MenuHamburPanaderia'
+import { MenuHamburPerfumeria } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/MenuHamburPerfumeria'
+import { MenuHamburAlmacenVerTodo } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Almacen/MenuHamburAlmacenVerTodo'
 import {
     MenuHamburAlmacenArrozLegumbres
-} from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenArrozLegumbres'
-import { MenuHamburAlmacenArroz } from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenBebidas'
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Almacen/MenuHamburAlmacenArrozLegumbres'
+import { MenuHamburAlmacenArroz } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Almacen/MenuHamburAlmacenBebidas'
 import {
     MenuHamburAlmacenCaldosSopasPure
-} from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenCaldosSopasPure'
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Almacen/MenuHamburAlmacenCaldosSopasPure'
 import {
     MenuHamburAlmacenEnlatadosConservas
-} from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenEnlatadosConservas'
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Almacen/MenuHamburAlmacenEnlatadosConservas'
 import {
     MenuHamburAlmacenGolosinasChocolates
-} from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenGolosinasChocolates'
-import { MenuHamburAlmacenHarinas } from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenHarinas'
-import { MenuHamburAlmacenPastasSecas } from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenPastasSecas'
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Almacen/MenuHamburAlmacenGolosinasChocolates'
+import { MenuHamburAlmacenHarinas } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Almacen/MenuHamburAlmacenHarinas'
+import { MenuHamburAlmacenPastasSecas } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Almacen/MenuHamburAlmacenPastasSecas'
 import {
     MenuHamburAlmacenReposteriaPostres
-} from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenReposteriaPostres'
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Almacen/MenuHamburAlmacenReposteriaPostres'
 import {
     MenuHamburAlmacenSalAderezosSaborizadores
-} from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenSalAderezosSaborizadores'
-import { MenuHamburAlmacenSnacks } from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenSnacks'
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Almacen/MenuHamburAlmacenSalAderezosSaborizadores'
+import { MenuHamburAlmacenSnacks } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Almacen/MenuHamburAlmacenSnacks'
 import {
     MenuHamburguesaAlmacenAceitesVinagres
-} from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenAceitesVinagres'
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Almacen/MenuHamburAlmacenAceitesVinagres'
+import {
+    MenuHamburBazarTextilVerTodo
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/BazarTextil/MenuHamburBazarTextilVerTodo'
+import {
+    MenuHamburBazarTextilAutomotor
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/BazarTextil/MenuHamburBazarTextilAutomotor'
+import {
+    MenuHamburBazarTextilCocinaComedor
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/BazarTextil/MenuHamburBazarTextilCocinaComedor'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -173,6 +182,10 @@ const test = baseTest.extend<{
     menuHamburAlmacenSalAderezosSaborizadores: MenuHamburAlmacenSalAderezosSaborizadores
     menuHamburAlmacenSnacks: MenuHamburAlmacenSnacks
     menuHamburguesaAlmacenAceitesVinagres: MenuHamburguesaAlmacenAceitesVinagres
+    menuHamburBazarTextilVerTodo: MenuHamburBazarTextilVerTodo
+    menuHamburBazarTextilAutomotor: MenuHamburBazarTextilAutomotor
+    menuHamburBazarTextilCocinaComedor: MenuHamburBazarTextilCocinaComedor
+
 
 }>({
     // LOGIN PAGE
@@ -188,6 +201,21 @@ const test = baseTest.extend<{
     ingresarCuenta: async ({ page, context }, use) => {
         await use(new IngresarCuenta(page, context, environment))
     },
+
+
+    // MENU HAMBURGUESA - BAZAR Y TEXTIL
+    menuHamburBazarTextilVerTodo: async ({ page, context }, use) => {
+        await use(new MenuHamburBazarTextilVerTodo(page, context, environment))
+    },
+    menuHamburBazarTextilAutomotor: async ({ page, context }, use) => {
+        await use(new MenuHamburBazarTextilAutomotor(page, context, environment))
+    },
+    menuHamburBazarTextilCocinaComedor: async ({ page, context }, use) => {
+        await use(new MenuHamburBazarTextilCocinaComedor(page, context, environment))
+    },
+
+
+
 
 
     // MENU HAMBURGUESA - ALMACEN
@@ -227,10 +255,6 @@ const test = baseTest.extend<{
     menuHamburguesaAlmacenAceitesVinagres: async ({ page, context }, use) => {
         await use(new MenuHamburguesaAlmacenAceitesVinagres(page, context, environment))
     },
-
-
-
-
 
 
     // MENU HAMBURGUESA
