@@ -2,9 +2,9 @@ import { Page, BrowserContext, Locator, expect } from '@playwright/test'
 import { BasePage } from '../../commonActions'
 import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
 
-export class MenuHamburAlmacenGelatinas extends BasePage {
+export class MenuHamburAlmacenGolosinasChocolates extends BasePage {
 
-    readonly GELATINAS: Locator
+    readonly GOLOSINAS_CHOCOLATES: Locator
 
     private env: any
 
@@ -12,16 +12,16 @@ export class MenuHamburAlmacenGelatinas extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.GELATINAS = this.page.locator('//a [@id="menu-item-category-gelatinas"]')
+        this.GOLOSINAS_CHOCOLATES = this.page.locator("//div[normalize-space()='golosinas y chocolates']")
     }
 
-    async clickAlmacenGelatinas(): Promise<void> {
-        await this.click(this.GELATINAS)
+    async clickAlmacenGolosinasChocolates(): Promise<void> {
+        await this.click(this.GOLOSINAS_CHOCOLATES)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
     }
 
-    async navigateToMenuHamburAlmacenGelatinas(): Promise<void> {
-        await this.clickAlmacenGelatinas()
+    async navigateToMenuHamburAlmacenGolosinasChocolates(): Promise<void> {
+        await this.clickAlmacenGolosinasChocolates()
     }
 }

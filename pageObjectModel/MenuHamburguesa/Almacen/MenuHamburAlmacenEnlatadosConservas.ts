@@ -12,7 +12,7 @@ export class MenuHamburAlmacenEnlatadosConservas extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.ENLATADOS_CONSERVAS = this.page.locator('//a [@id="menu-item-category-enlatados-conservas"]')
+        this.ENLATADOS_CONSERVAS = this.page.locator("//div[normalize-space()='enlatados y conservas']")
     }
 
     async clickAlmacenEnlatadosConservas(): Promise<void> {

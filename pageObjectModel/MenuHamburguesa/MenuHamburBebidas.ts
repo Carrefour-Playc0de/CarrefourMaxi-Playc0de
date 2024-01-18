@@ -11,7 +11,7 @@ export class MenuHamburBebidas extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.BEBIDAS = this.page.locator('//div[contains(text(),\'Bebidas\')]')
+        this.BEBIDAS = this.page.locator("//div[@onclick=\"gotoPage('sec', 'bebidas')\"][normalize-space()='bebidas']")
     }
 
     async clickBebidas(): Promise<void> {

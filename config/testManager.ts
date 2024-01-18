@@ -75,6 +75,43 @@ import { BotonConfirmar } from '../pageObjectModel/RecibirTuCompra/RetiroEnSucur
 import {
     ModalIngresaTusDatos
 } from '../pageObjectModel/RecibirTuCompra/RetiroEnSucursal/Sucursal/IngresaTusDatos/ModalIngresaTusDatos'
+import { MenuHamburguesa } from '../pageObjectModel/MenuHamburguesa/MenuHambur'
+import { MenuHamburAlmacen } from '../pageObjectModel/MenuHamburguesa/MenuHamburAlmacen'
+import { MenuHamburBazarTextil } from '../pageObjectModel/MenuHamburguesa/MenuHamburBazarTextil'
+import { MenuHamburBebidas } from '../pageObjectModel/MenuHamburguesa/MenuHamburBebidas'
+import { MenuHamburDesayunoMerienda } from '../pageObjectModel/MenuHamburguesa/MenuHamburDesayunoMerienda'
+import { MenuHamburLacteosProdsFrescos } from '../pageObjectModel/MenuHamburguesa/MenuHamburLacteosProdsFrescos'
+import { MenuHamburLimpieza } from '../pageObjectModel/MenuHamburguesa/MenuHamburLimpieza'
+import { MenuHamburMascotas } from '../pageObjectModel/MenuHamburguesa/MenuHamburMascotas'
+import { MenuHamburMundoBebe } from '../pageObjectModel/MenuHamburguesa/MenuHamburMundoBebe'
+import { MenuHamburPanaderia } from '../pageObjectModel/MenuHamburguesa/MenuHamburPanaderia'
+import { MenuHamburPerfumeria } from '../pageObjectModel/MenuHamburguesa/MenuHamburPerfumeria'
+import { MenuHamburAlmacenVerTodo } from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenVerTodo'
+import {
+    MenuHamburAlmacenArrozLegumbres
+} from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenArrozLegumbres'
+import { MenuHamburAlmacenArroz } from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenBebidas'
+import {
+    MenuHamburAlmacenCaldosSopasPure
+} from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenCaldosSopasPure'
+import {
+    MenuHamburAlmacenEnlatadosConservas
+} from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenEnlatadosConservas'
+import {
+    MenuHamburAlmacenGolosinasChocolates
+} from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenGolosinasChocolates'
+import { MenuHamburAlmacenHarinas } from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenHarinas'
+import { MenuHamburAlmacenPastasSecas } from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenPastasSecas'
+import {
+    MenuHamburAlmacenReposteriaPostres
+} from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenReposteriaPostres'
+import {
+    MenuHamburAlmacenSalAderezosSaborizadores
+} from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenSalAderezosSaborizadores'
+import { MenuHamburAlmacenSnacks } from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenSnacks'
+import {
+    MenuHamburguesaAlmacenAceitesVinagres
+} from '../pageObjectModel/MenuHamburguesa/Almacen/MenuHamburAlmacenAceitesVinagres'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -113,6 +150,29 @@ const test = baseTest.extend<{
     selectSucursalArmaPedidoCAMPANAColectoraNorte1647: SelectSucursalArmaPedidoCAMPANAColectoraNorte1647
     botonConfirmar: BotonConfirmar
     modalIngresaTusDatos: ModalIngresaTusDatos
+    menuHamburguesa: MenuHamburguesa
+    menuHamburAlmacen: MenuHamburAlmacen
+    menuHamburBazarTextil: MenuHamburBazarTextil
+    menuHamburBebidas: MenuHamburBebidas
+    menuHamburDesayunoMerienda: MenuHamburDesayunoMerienda
+    menuHamburLacteosProdsFrescos: MenuHamburLacteosProdsFrescos
+    menuHamburLimpieza: MenuHamburLimpieza
+    menuHamburMascotas: MenuHamburMascotas
+    menuHamburMundoBebe: MenuHamburMundoBebe
+    menuHamburPanaderia: MenuHamburPanaderia
+    menuHamburPerfumeria: MenuHamburPerfumeria
+    menuHamburAlmacenVerTodo: MenuHamburAlmacenVerTodo
+    menuHamburAlmacenArrozLegumbres: MenuHamburAlmacenArrozLegumbres
+    menuHamburAlmacenArroz: MenuHamburAlmacenArroz
+    menuHamburAlmacenCaldosSopasPure: MenuHamburAlmacenCaldosSopasPure
+    menuHamburAlmacenEnlatadosConservas: MenuHamburAlmacenEnlatadosConservas
+    menuHamburAlmacenGolosinasChocolates: MenuHamburAlmacenGolosinasChocolates
+    menuHamburAlmacenHarinas: MenuHamburAlmacenHarinas
+    menuHamburAlmacenPastasSecas: MenuHamburAlmacenPastasSecas
+    menuHamburAlmacenReposteriaPostres: MenuHamburAlmacenReposteriaPostres
+    menuHamburAlmacenSalAderezosSaborizadores: MenuHamburAlmacenSalAderezosSaborizadores
+    menuHamburAlmacenSnacks: MenuHamburAlmacenSnacks
+    menuHamburguesaAlmacenAceitesVinagres: MenuHamburguesaAlmacenAceitesVinagres
 
 }>({
     // LOGIN PAGE
@@ -130,8 +190,83 @@ const test = baseTest.extend<{
     },
 
 
+    // MENU HAMBURGUESA - ALMACEN
+    menuHamburAlmacenVerTodo: async ({ page, context }, use) => {
+        await use(new MenuHamburAlmacenVerTodo(page, context, environment))
+    },
+    menuHamburAlmacenArrozLegumbres: async ({ page, context }, use) => {
+        await use(new MenuHamburAlmacenArrozLegumbres(page, context, environment))
+    },
+    menuHamburAlmacenArroz: async ({ page, context }, use) => {
+        await use(new MenuHamburAlmacenArroz(page, context, environment))
+    },
+    menuHamburAlmacenCaldosSopasPure: async ({ page, context }, use) => {
+        await use(new MenuHamburAlmacenCaldosSopasPure(page, context, environment))
+    },
+    menuHamburAlmacenEnlatadosConservas: async ({ page, context }, use) => {
+        await use(new MenuHamburAlmacenEnlatadosConservas(page, context, environment))
+    },
+    menuHamburAlmacenGolosinasChocolates: async ({ page, context }, use) => {
+        await use(new MenuHamburAlmacenGolosinasChocolates(page, context, environment))
+    },
+    menuHamburAlmacenHarinas: async ({ page, context }, use) => {
+        await use(new MenuHamburAlmacenHarinas(page, context, environment))
+    },
+    menuHamburAlmacenPastasSecas: async ({ page, context }, use) => {
+        await use(new MenuHamburAlmacenPastasSecas(page, context, environment))
+    },
+    menuHamburAlmacenReposteriaPostres: async ({ page, context }, use) => {
+        await use(new MenuHamburAlmacenReposteriaPostres(page, context, environment))
+    },
+    menuHamburAlmacenSalAderezosSaborizadores: async ({ page, context }, use) => {
+        await use(new MenuHamburAlmacenSalAderezosSaborizadores(page, context, environment))
+    },
+    menuHamburAlmacenSnacks: async ({ page, context }, use) => {
+        await use(new MenuHamburAlmacenSnacks(page, context, environment))
+    },
+    menuHamburguesaAlmacenAceitesVinagres: async ({ page, context }, use) => {
+        await use(new MenuHamburguesaAlmacenAceitesVinagres(page, context, environment))
+    },
 
 
+
+
+
+
+    // MENU HAMBURGUESA
+    menuHamburguesa: async ({ page, context }, use) => {
+        await use(new MenuHamburguesa(page, context, environment))
+    },
+    menuHamburAlmacen: async ({ page, context }, use) => {
+        await use(new MenuHamburAlmacen(page, context, environment))
+    },
+    menuHamburBazarTextil: async ({ page, context }, use) => {
+        await use(new MenuHamburBazarTextil(page, context, environment))
+    },
+    menuHamburBebidas: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidas(page, context, environment))
+    },
+    menuHamburDesayunoMerienda: async ({ page, context }, use) => {
+        await use(new MenuHamburDesayunoMerienda(page, context, environment))
+    },
+    menuHamburLacteosProdsFrescos: async ({ page, context }, use) => {
+        await use(new MenuHamburLacteosProdsFrescos(page, context, environment))
+    },
+    menuHamburLimpieza: async ({ page, context }, use) => {
+        await use(new MenuHamburLimpieza(page, context, environment))
+    },
+    menuHamburMascotas: async ({ page, context }, use) => {
+        await use(new MenuHamburMascotas(page, context, environment))
+    },
+    menuHamburMundoBebe: async ({ page, context }, use) => {
+        await use(new MenuHamburMundoBebe(page, context, environment))
+    },
+    menuHamburPanaderia: async ({ page, context }, use) => {
+        await use(new MenuHamburPanaderia(page, context, environment))
+    },
+    menuHamburPerfumeria: async ({ page, context }, use) => {
+        await use(new MenuHamburPerfumeria(page, context, environment))
+    },
 
 
 

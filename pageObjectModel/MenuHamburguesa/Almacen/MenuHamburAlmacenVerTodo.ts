@@ -12,7 +12,7 @@ export class MenuHamburAlmacenVerTodo extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.ALMACEN_VER_TODO = this.page.locator('//span[@class=\'vtex-store-link-0-x-label vtex-store-link-0-x-label--linkHeaderSubmenu\']')
+        this.ALMACEN_VER_TODO = this.page.locator("//div[@onclick=\"gotoPage('sec', 'almacén')\"][normalize-space()='VER TODO']")
     }
 
     async clickAlmacenVerTodo(): Promise<void> {

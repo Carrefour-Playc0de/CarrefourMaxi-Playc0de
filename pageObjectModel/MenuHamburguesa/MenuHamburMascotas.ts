@@ -11,7 +11,7 @@ export class MenuHamburMascotas extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.MASCOTAS = this.page.locator('//div[contains(text(),\"Mascotas\")]')
+        this.MASCOTAS = this.page.locator("//div[normalize-space()='mascotas']")
     }
 
     async clickMascotas(): Promise<void> {

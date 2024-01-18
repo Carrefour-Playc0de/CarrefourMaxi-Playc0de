@@ -11,7 +11,7 @@ export class MenuHamburLacteosProdsFrescos extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.LACTEOS_PROD_FRESCOS = this.page.locator('//div[contains(text(),"Lácteos y productos frescos")]')
+        this.LACTEOS_PROD_FRESCOS = this.page.locator("//div[normalize-space()='lácteos y productos frescos']")
     }
 
     async clickLacteosProdsFrescos(): Promise<void> {

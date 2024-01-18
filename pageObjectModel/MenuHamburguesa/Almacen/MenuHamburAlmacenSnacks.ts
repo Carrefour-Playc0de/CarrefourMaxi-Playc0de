@@ -12,7 +12,7 @@ export class MenuHamburAlmacenSnacks extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.SNACKS = this.page.locator('//a [@id="menu-item-category-snacks"]')
+        this.SNACKS = this.page.locator("//div[normalize-space()='snacks']")
     }
 
     async clickAlmacenSnacks(): Promise<void> {

@@ -11,7 +11,7 @@ export class MenuHamburAlmacen extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.ALMACEN = this.page.locator('//div[contains(text(),\'Almacén\')]')
+        this.ALMACEN = this.page.locator("//div[normalize-space()='almacén']")
     }
 
     async clickAlmacen(): Promise<void> {

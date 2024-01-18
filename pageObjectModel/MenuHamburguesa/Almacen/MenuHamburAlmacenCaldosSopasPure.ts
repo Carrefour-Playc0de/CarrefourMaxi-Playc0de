@@ -12,7 +12,7 @@ export class MenuHamburAlmacenCaldosSopasPure extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.CALDOS_SOPAS_PURE = this.page.locator('//a [@id="menu-item-category-caldos-sopa-pure"]')
+        this.CALDOS_SOPAS_PURE = this.page.locator("//div[normalize-space()='caldos, sopas y puré']")
     }
 
     async clickAlmacenCaldosSopasPure(): Promise<void> {

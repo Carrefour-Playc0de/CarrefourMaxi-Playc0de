@@ -12,7 +12,7 @@ export class MenuHamburAlmacenArroz extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.ARROZ = this.page.locator('//a [@id="menu-item-category-arroz"]')
+        this.ARROZ = this.page.locator("//div[@class='itm3'][normalize-space()='bebidas']")
     }
 
     async clickAlmacenArroz(): Promise<void> {

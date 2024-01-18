@@ -1,5 +1,4 @@
 import test from '../config/testManager'
-import { CerrarModalTeDamosBienvenida } from '../pageObjectModel/CerrarModalTeDamosBienvenida'
 
 test('@Smoke @Regression (TS-01) Verificar que al clickear la X del modal Te Damos la Bienvenida funciona correctamente', async ({cerrarModalTeDamosBienvenida}) => {
 

@@ -2,26 +2,26 @@ import { Page, BrowserContext, Locator, expect } from '@playwright/test'
 import { BasePage } from '../commonActions'
 import { loadEnvironmentConfig, loadTestDataConfig } from '../../config/configLoader'
 
-export class MenuHamburLimpieza extends BasePage {
+export class MenuHamburguesa extends BasePage {
 
-    readonly LIMPIEZA: Locator
+    readonly MENU_HAMBURGUESA: Locator
 
     private env: any
     constructor(page: Page, context: BrowserContext, environment: string) {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.LIMPIEZA = this.page.locator("//div[normalize-space()='limpieza']")
+        this.MENU_HAMBURGUESA = this.page.locator("//img[@alt='menu']")
     }
 
-    async clickLimpieza(): Promise<void> {
-        await this.click(this.LIMPIEZA)
+    async clickMenuHamburguesa(): Promise<void> {
+        await this.click(this.MENU_HAMBURGUESA)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
         await this.page.waitForTimeout(3000)
     }
 
-    async navigateToMenuHamburLimpieza(): Promise<void> {
-        await this.clickLimpieza()
+    async navigateToMenuHamburguesa(): Promise<void> {
+        await this.clickMenuHamburguesa()
     }
 }

@@ -12,7 +12,7 @@ export class MenuHamburAlmacenSalAderezosSaborizadores extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.SAL_ADEREZOS_SABORIZADORES = this.page.locator('//a [@id="menu-item-category-sal-aderezos-saborizantes"]')
+        this.SAL_ADEREZOS_SABORIZADORES = this.page.locator("//div[normalize-space()='sal, aderezos y saborizadores']")
     }
 
     async clickAlmacenSalAderezosSaborizadores(): Promise<void> {

@@ -11,7 +11,7 @@ export class MenuHamburPanaderia extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.PANADERIA = this.page.locator('//div[contains(text(),\"Panadería\")]')
+        this.PANADERIA = this.page.locator("//div[normalize-space()='panadería']")
     }
 
     async clickPanaderia(): Promise<void> {

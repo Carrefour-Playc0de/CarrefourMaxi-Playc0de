@@ -12,7 +12,7 @@ export class MenuHamburguesaAlmacenAceitesVinagres extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.ACEITES_VINAGRES = this.page.locator('//a [@id="menu-item-category-aceites-vinagres"]')
+        this.ACEITES_VINAGRES = this.page.locator("//div[normalize-space()='aceites y vinagres']")
     }
 
     async clickAlmacenAceitesVinagres(): Promise<void> {

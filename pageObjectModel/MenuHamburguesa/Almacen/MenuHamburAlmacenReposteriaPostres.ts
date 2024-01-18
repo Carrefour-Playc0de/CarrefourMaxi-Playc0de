@@ -12,7 +12,7 @@ export class MenuHamburAlmacenReposteriaPostres extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.REPOSTERIA_POSTRES = this.page.locator('//a [@id="menu-item-category-reposterias-postres"]')
+        this.REPOSTERIA_POSTRES = this.page.locator("//div[normalize-space()='repostería y postres']")
     }
 
     async clickAlmacenReposteriaPostres(): Promise<void> {

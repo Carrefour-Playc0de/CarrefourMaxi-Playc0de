@@ -11,7 +11,7 @@ export class MenuHamburBazarTextil extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.BAZAR_TEXTIL = this.page.locator('//div[contains(text(),\"Bazar y textil\")]')
+        this.BAZAR_TEXTIL = this.page.locator("//div[normalize-space()='bazar y textil']")
     }
 
     async clickBazarTextil(): Promise<void> {

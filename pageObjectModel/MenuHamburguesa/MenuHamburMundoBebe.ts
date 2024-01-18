@@ -11,7 +11,7 @@ export class MenuHamburMundoBebe extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.MUNDO_BEBE = this.page.locator('//div[contains(text(),\"Mundo bebé\")]')
+        this.MUNDO_BEBE = this.page.locator("//div[normalize-space()='mundo bebé']")
     }
 
     async clickMundoBebe(): Promise<void> {

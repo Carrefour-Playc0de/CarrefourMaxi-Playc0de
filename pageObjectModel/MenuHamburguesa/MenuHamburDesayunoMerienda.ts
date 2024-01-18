@@ -11,7 +11,7 @@ export class MenuHamburDesayunoMerienda extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.DESAYUNO_MERIENDA = this.page.locator('//div[contains(text(),\"Desayuno y merienda\")]')
+        this.DESAYUNO_MERIENDA = this.page.locator("//div[normalize-space()='desayuno y merienda']")
     }
 
     async clickDesayunoMerienda(): Promise<void> {
