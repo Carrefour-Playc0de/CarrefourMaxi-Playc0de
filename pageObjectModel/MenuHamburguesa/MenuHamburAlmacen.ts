@@ -12,7 +12,7 @@ export class MenuHamburAlmacen extends BasePage {
         this.env = loadEnvironmentConfig(environment)
     }
 
-    async clickAlmacen(): Promise<void> {
+    async mouseOverAlmacen(): Promise<void> {
         let selector = "//div[normalize-space()='almacén']"
         await this.page.waitForSelector(selector)
         let element = await this.page.$(selector)
@@ -22,6 +22,6 @@ export class MenuHamburAlmacen extends BasePage {
     }
 
     async navigateToMenuHamburAlmacen(): Promise<void> {
-        await this.clickAlmacen()
+        await this.mouseOverAlmacen()
     }
 }
