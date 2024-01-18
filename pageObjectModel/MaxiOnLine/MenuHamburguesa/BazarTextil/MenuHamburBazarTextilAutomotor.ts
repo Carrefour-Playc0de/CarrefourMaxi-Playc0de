@@ -19,7 +19,6 @@ export class MenuHamburBazarTextilAutomotor extends BasePage {
         await this.click(this.AUTOMOTOR)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburBazarTextilAutomotor(): Promise<void> {

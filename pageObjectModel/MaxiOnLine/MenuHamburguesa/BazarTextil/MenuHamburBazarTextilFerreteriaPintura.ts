@@ -12,7 +12,7 @@ export class MenuHamburBazarTextilFerreteriaPintura extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.FERRETERIA_PINTURA = this.page.locator('//a [@id="menu-item-category-ferreteria-pintura"]')
+        this.FERRETERIA_PINTURA = this.page.locator("//div[normalize-space()='ferretería y pintura']")
     }
 
     async clickBazarTextilFerreteriaPintura(): Promise<void> {

@@ -121,6 +121,15 @@ import {
 import {
     MenuHamburBazarTextilCocinaComedor
 } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/BazarTextil/MenuHamburBazarTextilCocinaComedor'
+import {
+    MenuHamburBazarTextilDecoOrganizacion
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/BazarTextil/MenuHamburBazarTextilDecoOrganizacion'
+import {
+    MenuHamburBazarTextilFerreteriaPintura
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/BazarTextil/MenuHamburBazarTextilFerreteriaPintura'
+import {
+    MenuHamburBazarTextilLibreria
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/BazarTextil/MenuHamburBazarTextilLibreria'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -185,6 +194,9 @@ const test = baseTest.extend<{
     menuHamburBazarTextilVerTodo: MenuHamburBazarTextilVerTodo
     menuHamburBazarTextilAutomotor: MenuHamburBazarTextilAutomotor
     menuHamburBazarTextilCocinaComedor: MenuHamburBazarTextilCocinaComedor
+    menuHamburBazarTextilDecoOrganizacion: MenuHamburBazarTextilDecoOrganizacion
+    menuHamburBazarTextilFerreteriaPintura: MenuHamburBazarTextilFerreteriaPintura
+    menuHamburBazarTextilLibreria: MenuHamburBazarTextilLibreria
 
 
 }>({
@@ -212,6 +224,15 @@ const test = baseTest.extend<{
     },
     menuHamburBazarTextilCocinaComedor: async ({ page, context }, use) => {
         await use(new MenuHamburBazarTextilCocinaComedor(page, context, environment))
+    },
+    menuHamburBazarTextilDecoOrganizacion: async ({ page, context }, use) => {
+        await use(new MenuHamburBazarTextilDecoOrganizacion(page, context, environment))
+    },
+    menuHamburBazarTextilFerreteriaPintura: async ({ page, context }, use) => {
+        await use(new MenuHamburBazarTextilFerreteriaPintura(page, context, environment))
+    },
+    menuHamburBazarTextilLibreria: async ({ page, context }, use) => {
+        await use(new MenuHamburBazarTextilLibreria(page, context, environment))
     },
 
 

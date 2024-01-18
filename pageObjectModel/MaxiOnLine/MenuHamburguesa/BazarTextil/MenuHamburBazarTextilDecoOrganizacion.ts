@@ -12,7 +12,7 @@ export class MenuHamburBazarTextilDecoOrganizacion extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.DECO_ORGANIZACION = this.page.locator('//a [@id="menu-item-category-deco-organizacion"]')
+        this.DECO_ORGANIZACION = this.page.locator("//div[normalize-space()='deco y organización']")
     }
 
     async clickBazarTextilDecoOrganizacion(): Promise<void> {
