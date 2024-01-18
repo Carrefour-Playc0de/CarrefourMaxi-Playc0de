@@ -12,13 +12,14 @@ export class MenuHamburBebidasVerTodo extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.BEBIDAS_VER_TODO = this.page.locator('//span[@class=\'vtex-store-link-0-x-label vtex-store-link-0-x-label--linkHeaderSubmenu\']')
+        this.BEBIDAS_VER_TODO = this.page.locator("(//div[@class='itm2'][contains(.,'VER TODO')])[4]")
     }
 
     async clickBebidasVerTodo(): Promise<void> {
         await this.click(this.BEBIDAS_VER_TODO)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburBebidasVerTodo(): Promise<void> {

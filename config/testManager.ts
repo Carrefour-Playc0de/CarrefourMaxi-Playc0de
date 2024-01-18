@@ -130,6 +130,9 @@ import {
 import {
     MenuHamburBazarTextilLibreria
 } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/BazarTextil/MenuHamburBazarTextilLibreria'
+import {
+    MenuHamburBebidasVerTodo
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasVerTodo'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -197,6 +200,8 @@ const test = baseTest.extend<{
     menuHamburBazarTextilDecoOrganizacion: MenuHamburBazarTextilDecoOrganizacion
     menuHamburBazarTextilFerreteriaPintura: MenuHamburBazarTextilFerreteriaPintura
     menuHamburBazarTextilLibreria: MenuHamburBazarTextilLibreria
+    menuHamburBebidasVerTodo: MenuHamburBebidasVerTodo
+
 
 
 }>({
@@ -212,6 +217,11 @@ const test = baseTest.extend<{
     },
     ingresarCuenta: async ({ page, context }, use) => {
         await use(new IngresarCuenta(page, context, environment))
+    },
+
+    // MENU HAMBURGUESA - BEBIDAS
+    menuHamburBebidasVerTodo: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasVerTodo(page, context, environment))
     },
 
 
@@ -234,10 +244,6 @@ const test = baseTest.extend<{
     menuHamburBazarTextilLibreria: async ({ page, context }, use) => {
         await use(new MenuHamburBazarTextilLibreria(page, context, environment))
     },
-
-
-
-
 
     // MENU HAMBURGUESA - ALMACEN
     menuHamburAlmacenVerTodo: async ({ page, context }, use) => {
@@ -276,7 +282,6 @@ const test = baseTest.extend<{
     menuHamburguesaAlmacenAceitesVinagres: async ({ page, context }, use) => {
         await use(new MenuHamburguesaAlmacenAceitesVinagres(page, context, environment))
     },
-
 
     // MENU HAMBURGUESA
     menuHamburguesa: async ({ page, context }, use) => {

@@ -1,24 +1,28 @@
-// import test from '../../../config/testManager'
-//
-// // We can use steps like this to reproduce Cucumber formatting
-// test.beforeEach(async ({ mainPageAndAcceptCookies, menuHamburguesa, menuHamburBebidas}) => {
-//     await test.step(`Navigate to Carrefour page and Accept Cookies`, async () => {
-//         await mainPageAndAcceptCookies.navigateToMainPageAndAcceptCookies()
-//     })
-//     await test.step(`Clickear el Menu Hamburguesa`, async () => {
-//         await menuHamburguesa.navigateToMenuHamburguesa()
-//     })
-//     await test.step(`Click en Bebidas`, async () => {
-//         await menuHamburBebidas.navigateToMenuHamburBebidas()
-//     })
-// })
-//
-// test('@Smoke @Regression (B2C-TC-1082) Verificar que funciona el Menu Bebidas: VER TODO', async ({menuHamburBebidasVerTodo}) => {
-//
-//     await test.step('Click en Bebidas VER TODO', async () => {
-//         await menuHamburBebidasVerTodo.clickBebidasVerTodo()
-//     })
-// })
+import test from '../../../../config/testManager'
+
+test.beforeEach(async ({cerrarModalTeDamosBienvenida, menuHamburguesa, menuHamburBebidas}) => {
+    await test.step('Click en la X del modal Te Damos la Bienvenida', async () => {
+        await cerrarModalTeDamosBienvenida.navigateToMainPageAndCerrarModalTeDamosBienvenida();
+    })
+    await test.step('Clickear el icono Menu Hamburguesa', async () => {
+        await menuHamburguesa.navigateToMenuHamburguesa()
+    })
+    await test.step(`Click en Bebidas`, async () => {
+        await menuHamburBebidas.navigateToMenuHamburBebidas()
+    })
+})
+
+test('@Test @Regression @MenuHamburguesa (B2C-TC-1082) Verificar que funciona el Menu Bebidas: VER TODO', async ({menuHamburBebidasVerTodo}) => {
+
+    await test.step('Click en Bebidas VER TODO', async () => {
+        await menuHamburBebidasVerTodo.navigateToMenuHamburBebidasVerTodo()
+    })
+})
+
+
+
+
+
 // test('@Regression @MenuHamburguesa (B2C-TC-968) Verificar que funciona el Menu Bebidas: Aguas', async ({menuHamburBebidasAguas}) => {
 //
 //     await test.step('Click en Aguas', async () => {

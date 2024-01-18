@@ -19,6 +19,7 @@ export class MenuHamburBebidasBebidasBlancas extends BasePage {
         await this.click(this.BEBIDAS_BLANCAS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburBebidasBebidasBlancas(): Promise<void> {

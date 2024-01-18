@@ -19,6 +19,7 @@ export class MenuHamburBebidasFernetAperitivos extends BasePage {
         await this.click(this.FERNET_APERITIVOS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburBebidasFernetAperitivos(): Promise<void> {
