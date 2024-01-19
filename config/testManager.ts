@@ -252,69 +252,19 @@ const test = baseTest.extend<{
         await use(new IngresarCuenta(page, context, environment))
     },
 
-    menuHamburguesaBebidasCervezas: async ({ page, context }, use) => {
-        await use(new MenuHamburguesaBebidasCervezas(page, context, environment))
-    },
-    menuHamburBebidasEspumantesSidras: async ({ page, context }, use) => {
-        await use(new MenuHamburBebidasEspumantesSidras(page, context, environment))
-    },
-    menuHamburBebidasFernetAperitivos: async ({ page, context }, use) => {
-        await use(new MenuHamburBebidasFernetAperitivos(page, context, environment))
-    },
-    menuHamburBebidasGaseosas: async ({ page, context }, use) => {
-        await use(new MenuHamburBebidasGaseosas(page, context, environment))
-    },
-    menuHamburBebidasJugos: async ({ page, context }, use) => {
-        await use(new MenuHamburBebidasJugos(page, context, environment))
-    },
-    menuHamburBebidasVinos: async ({ page, context }, use) => {
-        await use(new MenuHamburBebidasVinos(page, context, environment))
-    },
+    // MENU HAMBURGUESA - DESAYUNO Y MERIENDA
 
 
 
 
 
-    // MENU HAMBURGUESA - BEBIDAS
-    menuHamburBebidasVerTodo: async ({ page, context }, use) => {
-        await use(new MenuHamburBebidasVerTodo(page, context, environment))
-    },
-    menuHamburBebidasAguas: async ({ page, context }, use) => {
-        await use(new MenuHamburBebidasAguas(page, context, environment))
-    },
-    menuHamburBebidasBebidasBlancas: async ({ page, context }, use) => {
-        await use(new MenuHamburBebidasBebidasBlancas(page, context, environment))
-    },
-    menuHamburBebidasBebidasEnergizantes: async ({ page, context }, use) => {
-        await use(new MenuHamburBebidasBebidasEnergizantes(page, context, environment))
-    },
-    menuHamburBebidasBebidasIsotonicas: async ({ page, context }, use) => {
-        await use(new MenuHamburBebidasBebidasIsotonicas(page, context, environment))
-    },
 
 
 
 
 
-    // MENU HAMBURGUESA - BAZAR Y TEXTIL
-    menuHamburBazarTextilVerTodo: async ({ page, context }, use) => {
-        await use(new MenuHamburBazarTextilVerTodo(page, context, environment))
-    },
-    menuHamburBazarTextilAutomotor: async ({ page, context }, use) => {
-        await use(new MenuHamburBazarTextilAutomotor(page, context, environment))
-    },
-    menuHamburBazarTextilCocinaComedor: async ({ page, context }, use) => {
-        await use(new MenuHamburBazarTextilCocinaComedor(page, context, environment))
-    },
-    menuHamburBazarTextilDecoOrganizacion: async ({ page, context }, use) => {
-        await use(new MenuHamburBazarTextilDecoOrganizacion(page, context, environment))
-    },
-    menuHamburBazarTextilFerreteriaPintura: async ({ page, context }, use) => {
-        await use(new MenuHamburBazarTextilFerreteriaPintura(page, context, environment))
-    },
-    menuHamburBazarTextilLibreria: async ({ page, context }, use) => {
-        await use(new MenuHamburBazarTextilLibreria(page, context, environment))
-    },
+
+
 
     // MENU HAMBURGUESA - ALMACEN
     menuHamburAlmacenVerTodo: async ({ page, context }, use) => {
@@ -352,6 +302,61 @@ const test = baseTest.extend<{
     },
     menuHamburguesaAlmacenAceitesVinagres: async ({ page, context }, use) => {
         await use(new MenuHamburguesaAlmacenAceitesVinagres(page, context, environment))
+    },
+
+    // MENU HAMBURGUESA - BAZAR Y TEXTIL
+    menuHamburBazarTextilVerTodo: async ({ page, context }, use) => {
+        await use(new MenuHamburBazarTextilVerTodo(page, context, environment))
+    },
+    menuHamburBazarTextilAutomotor: async ({ page, context }, use) => {
+        await use(new MenuHamburBazarTextilAutomotor(page, context, environment))
+    },
+    menuHamburBazarTextilCocinaComedor: async ({ page, context }, use) => {
+        await use(new MenuHamburBazarTextilCocinaComedor(page, context, environment))
+    },
+    menuHamburBazarTextilDecoOrganizacion: async ({ page, context }, use) => {
+        await use(new MenuHamburBazarTextilDecoOrganizacion(page, context, environment))
+    },
+    menuHamburBazarTextilFerreteriaPintura: async ({ page, context }, use) => {
+        await use(new MenuHamburBazarTextilFerreteriaPintura(page, context, environment))
+    },
+    menuHamburBazarTextilLibreria: async ({ page, context }, use) => {
+        await use(new MenuHamburBazarTextilLibreria(page, context, environment))
+    },
+
+    // MENU HAMBURGUESA - BEBIDAS
+    menuHamburBebidasVerTodo: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasVerTodo(page, context, environment))
+    },
+    menuHamburBebidasAguas: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasAguas(page, context, environment))
+    },
+    menuHamburBebidasBebidasBlancas: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasBebidasBlancas(page, context, environment))
+    },
+    menuHamburBebidasBebidasEnergizantes: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasBebidasEnergizantes(page, context, environment))
+    },
+    menuHamburBebidasBebidasIsotonicas: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasBebidasIsotonicas(page, context, environment))
+    },
+    menuHamburguesaBebidasCervezas: async ({ page, context }, use) => {
+        await use(new MenuHamburguesaBebidasCervezas(page, context, environment))
+    },
+    menuHamburBebidasEspumantesSidras: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasEspumantesSidras(page, context, environment))
+    },
+    menuHamburBebidasFernetAperitivos: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasFernetAperitivos(page, context, environment))
+    },
+    menuHamburBebidasGaseosas: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasGaseosas(page, context, environment))
+    },
+    menuHamburBebidasJugos: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasJugos(page, context, environment))
+    },
+    menuHamburBebidasVinos: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasVinos(page, context, environment))
     },
 
     // MENU HAMBURGUESA
