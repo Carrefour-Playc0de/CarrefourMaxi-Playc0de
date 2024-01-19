@@ -12,14 +12,13 @@ export class MenuHamburBebidasEspumantesSidras extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.ESPUMANTES_SIDRAS = this.page.locator('//a [@id="menu-item-category-espumantes-sidras"]')
+        this.ESPUMANTES_SIDRAS = this.page.locator("(//div[normalize-space()='espumantes y sidras'])[1]")
     }
 
     async clickBebidasEspumantesSidras(): Promise<void> {
         await this.click(this.ESPUMANTES_SIDRAS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburBebidasEspumantesSidras(): Promise<void> {

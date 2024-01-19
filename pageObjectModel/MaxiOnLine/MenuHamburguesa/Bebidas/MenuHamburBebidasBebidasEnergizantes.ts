@@ -12,14 +12,13 @@ export class MenuHamburBebidasBebidasEnergizantes extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.BEBIDAS_ENERGIZANTES = this.page.locator('//a [@id="menu-item-category-bebidas-energizantes"]')
+        this.BEBIDAS_ENERGIZANTES = this.page.locator("(//div[normalize-space()='bebidas energizantes'])[1]")
     }
 
     async clickBebidasBebidasEnergizantes(): Promise<void> {
         await this.click(this.BEBIDAS_ENERGIZANTES)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburBebidasBebidasEnergizantes(): Promise<void> {

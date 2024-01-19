@@ -133,6 +133,30 @@ import {
 import {
     MenuHamburBebidasVerTodo
 } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasVerTodo'
+import { MenuHamburBebidasAguas } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasAguas'
+import {
+    MenuHamburBebidasBebidasBlancas
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasBebidasBlancas'
+import {
+    MenuHamburBebidasBebidasEnergizantes
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasBebidasEnergizantes'
+import {
+    MenuHamburBebidasBebidasIsotonicas
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasBebidasIsotonicas'
+import {
+    MenuHamburguesaBebidasCervezas
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasCervezas'
+import {
+    MenuHamburBebidasEspumantesSidras
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasEspumantesSidras'
+import {
+    MenuHamburBebidasFernetAperitivos
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasFernetAperitivos'
+import {
+    MenuHamburBebidasGaseosas
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasGaseosas'
+import { MenuHamburBebidasJugos } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasJugos'
+import { MenuHamburBebidasVinos } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasVinos'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -201,7 +225,16 @@ const test = baseTest.extend<{
     menuHamburBazarTextilFerreteriaPintura: MenuHamburBazarTextilFerreteriaPintura
     menuHamburBazarTextilLibreria: MenuHamburBazarTextilLibreria
     menuHamburBebidasVerTodo: MenuHamburBebidasVerTodo
-
+    menuHamburBebidasAguas: MenuHamburBebidasAguas
+    menuHamburBebidasBebidasBlancas: MenuHamburBebidasBebidasBlancas
+    menuHamburBebidasBebidasEnergizantes: MenuHamburBebidasBebidasEnergizantes
+    menuHamburBebidasBebidasIsotonicas: MenuHamburBebidasBebidasIsotonicas
+    menuHamburguesaBebidasCervezas: MenuHamburguesaBebidasCervezas
+    menuHamburBebidasEspumantesSidras: MenuHamburBebidasEspumantesSidras
+    menuHamburBebidasFernetAperitivos: MenuHamburBebidasFernetAperitivos
+    menuHamburBebidasGaseosas: MenuHamburBebidasGaseosas
+    menuHamburBebidasJugos: MenuHamburBebidasJugos
+    menuHamburBebidasVinos: MenuHamburBebidasVinos
 
 
 }>({
@@ -219,10 +252,48 @@ const test = baseTest.extend<{
         await use(new IngresarCuenta(page, context, environment))
     },
 
+    menuHamburguesaBebidasCervezas: async ({ page, context }, use) => {
+        await use(new MenuHamburguesaBebidasCervezas(page, context, environment))
+    },
+    menuHamburBebidasEspumantesSidras: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasEspumantesSidras(page, context, environment))
+    },
+    menuHamburBebidasFernetAperitivos: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasFernetAperitivos(page, context, environment))
+    },
+    menuHamburBebidasGaseosas: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasGaseosas(page, context, environment))
+    },
+    menuHamburBebidasJugos: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasJugos(page, context, environment))
+    },
+    menuHamburBebidasVinos: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasVinos(page, context, environment))
+    },
+
+
+
+
+
     // MENU HAMBURGUESA - BEBIDAS
     menuHamburBebidasVerTodo: async ({ page, context }, use) => {
         await use(new MenuHamburBebidasVerTodo(page, context, environment))
     },
+    menuHamburBebidasAguas: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasAguas(page, context, environment))
+    },
+    menuHamburBebidasBebidasBlancas: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasBebidasBlancas(page, context, environment))
+    },
+    menuHamburBebidasBebidasEnergizantes: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasBebidasEnergizantes(page, context, environment))
+    },
+    menuHamburBebidasBebidasIsotonicas: async ({ page, context }, use) => {
+        await use(new MenuHamburBebidasBebidasIsotonicas(page, context, environment))
+    },
+
+
+
 
 
     // MENU HAMBURGUESA - BAZAR Y TEXTIL

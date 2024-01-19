@@ -12,14 +12,13 @@ export class MenuHamburguesaBebidasCervezas extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.CERVEZAS = this.page.locator('//*[@id="menu-item-category-cervezas"]/div[contains(text(),\'Cervezas\')]');
+        this.CERVEZAS = this.page.locator("(//div[normalize-space()='cervezas'])[1]");
     }
 
     async clickBebidasCervezas(): Promise<void> {
         await this.click(this.CERVEZAS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburBebidasCervezas(): Promise<void> {

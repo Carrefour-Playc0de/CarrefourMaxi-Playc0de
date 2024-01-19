@@ -12,14 +12,13 @@ export class MenuHamburBebidasBebidasIsotonicas extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.BEBIDAS_ISOTONICAS = this.page.locator('//a [@id="menu-item-category-bebidas-isotonicas"]')
+        this.BEBIDAS_ISOTONICAS = this.page.locator("(//div[normalize-space()='bebidas isotónicas'])[1]")
     }
 
     async clickBebidasBebidasIsotonicas(): Promise<void> {
         await this.click(this.BEBIDAS_ISOTONICAS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburBebidasBebidasIsotonicas(): Promise<void> {

@@ -12,14 +12,13 @@ export class MenuHamburBebidasFernetAperitivos extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.FERNET_APERITIVOS = this.page.locator('//a [@id="menu-item-category-fernet-aperitivos"]')
+        this.FERNET_APERITIVOS = this.page.locator("(//div[normalize-space()='fernet y aperitivos'])[1]")
     }
 
     async clickBebidasFernetAperitivos(): Promise<void> {
         await this.click(this.FERNET_APERITIVOS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburBebidasFernetAperitivos(): Promise<void> {
