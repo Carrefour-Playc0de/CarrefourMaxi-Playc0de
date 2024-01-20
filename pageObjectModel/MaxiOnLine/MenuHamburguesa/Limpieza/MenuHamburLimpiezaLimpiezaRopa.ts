@@ -1,8 +1,8 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from '../../MaxiOnLine/commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
+import { BasePage } from '../../../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
-export class MenuHamburLimpiezaLimpiezaDeRopa extends BasePage {
+export class MenuHamburLimpiezaLimpiezaRopa extends BasePage {
 
     readonly LIMPIEZA_DE_ROPA: Locator
 
@@ -12,13 +12,14 @@ export class MenuHamburLimpiezaLimpiezaDeRopa extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.LIMPIEZA_DE_ROPA = this.page.locator('')
+        this.LIMPIEZA_DE_ROPA = this.page.locator("")
     }
 
     async clickLimpiezaLimpiezaDeRopa(): Promise<void> {
         await this.click(this.LIMPIEZA_DE_ROPA)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburLimpiezaLimpiezaDeRopa(): Promise<void> {

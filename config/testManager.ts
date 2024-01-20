@@ -157,6 +157,60 @@ import {
 } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasGaseosas'
 import { MenuHamburBebidasJugos } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasJugos'
 import { MenuHamburBebidasVinos } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Bebidas/MenuHamburBebidasVinos'
+import {
+    MenuHamburDesayunoMeriendaVerTodo
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/DesayunoMerienda/MenuHamburDesayunoMeriendaVerTodo'
+import {
+    MenuHamburDesayunoMeriendaAzucarEndulzantes
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/DesayunoMerienda/MenuHamburDesayunoMeriendaAzucarEndulzantes'
+import {
+    MenuHamburDesayunoMeriendaBudinesMagdalenas
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/DesayunoMerienda/MenuHamburDesayunoMeriendaBudinesMagdalenas'
+import {
+    MenuHamburDesayunoMeriendaCafe
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/DesayunoMerienda/MenuHamburDesayunoMeriendaCafe'
+import {
+    MenuHamburDesayunoMeriendaCerealesBarritas
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/DesayunoMerienda/MenuHamburDesayunoMeriendaCerealesBarritas'
+import {
+    MenuHamburDesayunoMeriendaGalletitasBizcochitosTostadas
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/DesayunoMerienda/MenuHamburDesayunoMeriendaGalletitasBizcochitosTostadas'
+import {
+    MenuHamburDesayunoMeriendaInfusiones
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/DesayunoMerienda/MenuHamburDesayunoMeriendaInfusiones'
+import {
+    MenuHamburDesayunoMeriendaMermeladasOtrosDulces
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/DesayunoMerienda/MenuHamburDesayunoMeriendaMermeladasOtrosDulces'
+import {
+    MenuHamburDesayunoMeriendaYerba
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/DesayunoMerienda/MenuHamburDesayunoMeriendaYerba'
+import {
+    MenuHamburLacteosProdsFrescosVerTodo
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/LacteosProdsFrescos/MenuHamburLacteosProdsFrescosVerTodo'
+import {
+    MenuHamburLacteosProdsFrescosDulceDeLeche
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/LacteosProdsFrescos/MenuHamburLacteosProdsFrescosDulceDeLeche'
+import {
+    MenuHamburLacteosProdsFrescosLeches
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/LacteosProdsFrescos/MenuHamburLacteosProdsFrescosLeches'
+import {
+    MenuHamburLacteosProdsFrescosLechesPolvoYLargaVida
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/LacteosProdsFrescos/MenuHamburLacteosProdsFrescosLechesPolvoYLargaVida'
+import {
+    MenuHamburLacteosProdsFrescosMantecasMargarinasLevaduras
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/LacteosProdsFrescos/MenuHamburLacteosProdsFrescosMantecasMargarinasLevaduras'
+import {
+    MenuHamburLacteosProdsFrescosPAS
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/LacteosProdsFrescos/MenuHamburLacteosProdsFrescosPAS'
+import {
+    MenuHamburLacteosProdsFrescosQuesos
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/LacteosProdsFrescos/MenuHamburLacteosProdsFrescosQuesos'
+import {
+    MenuHamburLacteosProdsFrescosSeco
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/LacteosProdsFrescos/MenuHamburLacteosProdsFrescosSeco'
+import {
+    MenuHamburLimpiezaVerTodo
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Limpieza/MenuHamburLimpiezaVerTodo'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -235,6 +289,24 @@ const test = baseTest.extend<{
     menuHamburBebidasGaseosas: MenuHamburBebidasGaseosas
     menuHamburBebidasJugos: MenuHamburBebidasJugos
     menuHamburBebidasVinos: MenuHamburBebidasVinos
+    menuHamburDesayunoMeriendaVerTodo: MenuHamburDesayunoMeriendaVerTodo
+    menuHamburDesayunoMeriendaAzucarEndulzantes: MenuHamburDesayunoMeriendaAzucarEndulzantes
+    menuHamburDesayunoMeriendaBudinesMagdalenas: MenuHamburDesayunoMeriendaBudinesMagdalenas
+    menuHamburDesayunoMeriendaCafe: MenuHamburDesayunoMeriendaCafe
+    menuHamburDesayunoMeriendaCerealesBarritas: MenuHamburDesayunoMeriendaCerealesBarritas
+    menuHamburDesayunoMeriendaGalletitasBizcochitosTostadas: MenuHamburDesayunoMeriendaGalletitasBizcochitosTostadas
+    menuHamburDesayunoMeriendaInfusiones: MenuHamburDesayunoMeriendaInfusiones
+    menuHamburDesayunoMeriendaMermeladasOtrosDulces: MenuHamburDesayunoMeriendaMermeladasOtrosDulces
+    menuHamburDesayunoMeriendaYerba: MenuHamburDesayunoMeriendaYerba
+    menuHamburLacteosProdsFrescosVerTodo: MenuHamburLacteosProdsFrescosVerTodo
+    menuHamburLacteosProdsFrescosDulceDeLeche: MenuHamburLacteosProdsFrescosDulceDeLeche
+    menuHamburLacteosProdsFrescosLeches: MenuHamburLacteosProdsFrescosLeches
+    menuHamburLacteosProdsFrescosLechesPolvoYLargaVida: MenuHamburLacteosProdsFrescosLechesPolvoYLargaVida
+    menuHamburLacteosProdsFrescosMantecasMargarinasLevaduras: MenuHamburLacteosProdsFrescosMantecasMargarinasLevaduras
+    menuHamburLacteosProdsFrescosPAS: MenuHamburLacteosProdsFrescosPAS
+    menuHamburLacteosProdsFrescosQuesos: MenuHamburLacteosProdsFrescosQuesos
+    menuHamburLacteosProdsFrescosSeco: MenuHamburLacteosProdsFrescosSeco
+    menuHamburLimpiezaVerTodo: MenuHamburLimpiezaVerTodo
 
 
 }>({
@@ -252,8 +324,11 @@ const test = baseTest.extend<{
         await use(new IngresarCuenta(page, context, environment))
     },
 
-    // MENU HAMBURGUESA - DESAYUNO Y MERIENDA
 
+    // MENU HAMBURGUESA - LIMPIEZA
+    menuHamburLimpiezaVerTodo: async ({ page, context }, use) => {
+        await use(new MenuHamburLimpiezaVerTodo(page, context, environment))
+    },
 
 
 
@@ -357,6 +432,61 @@ const test = baseTest.extend<{
     },
     menuHamburBebidasVinos: async ({ page, context }, use) => {
         await use(new MenuHamburBebidasVinos(page, context, environment))
+    },
+
+    // MENU HAMBURGUESA - DESAYUNO Y MERIENDA
+    menuHamburDesayunoMeriendaVerTodo: async ({ page, context }, use) => {
+        await use(new MenuHamburDesayunoMeriendaVerTodo(page, context, environment))
+    },
+    menuHamburDesayunoMeriendaAzucarEndulzantes: async ({ page, context }, use) => {
+        await use(new MenuHamburDesayunoMeriendaAzucarEndulzantes(page, context, environment))
+    },
+    menuHamburDesayunoMeriendaBudinesMagdalenas: async ({ page, context }, use) => {
+        await use(new MenuHamburDesayunoMeriendaBudinesMagdalenas(page, context, environment))
+    },
+    menuHamburDesayunoMeriendaCafe: async ({ page, context }, use) => {
+        await use(new MenuHamburDesayunoMeriendaCafe(page, context, environment))
+    },
+    menuHamburDesayunoMeriendaCerealesBarritas: async ({ page, context }, use) => {
+        await use(new MenuHamburDesayunoMeriendaCerealesBarritas(page, context, environment))
+    },
+    menuHamburDesayunoMeriendaGalletitasBizcochitosTostadas: async ({ page, context }, use) => {
+        await use(new MenuHamburDesayunoMeriendaGalletitasBizcochitosTostadas(page, context, environment))
+    },
+    menuHamburDesayunoMeriendaInfusiones: async ({ page, context }, use) => {
+        await use(new MenuHamburDesayunoMeriendaInfusiones(page, context, environment))
+    },
+    menuHamburDesayunoMeriendaMermeladasOtrosDulces: async ({ page, context }, use) => {
+        await use(new MenuHamburDesayunoMeriendaMermeladasOtrosDulces(page, context, environment))
+    },
+    menuHamburDesayunoMeriendaYerba: async ({ page, context }, use) => {
+        await use(new MenuHamburDesayunoMeriendaYerba(page, context, environment))
+    },
+
+    // MENU HAMBURGUESA - LACTEOS Y PRODUCTOS FRESCOS
+    menuHamburLacteosProdsFrescosVerTodo: async ({ page, context }, use) => {
+        await use(new MenuHamburLacteosProdsFrescosVerTodo(page, context, environment))
+    },
+    menuHamburLacteosProdsFrescosDulceDeLeche: async ({ page, context }, use) => {
+        await use(new MenuHamburLacteosProdsFrescosDulceDeLeche(page, context, environment))
+    },
+    menuHamburLacteosProdsFrescosLeches: async ({ page, context }, use) => {
+        await use(new MenuHamburLacteosProdsFrescosLeches(page, context, environment))
+    },
+    menuHamburLacteosProdsFrescosLechesPolvoYLargaVida: async ({ page, context }, use) => {
+        await use(new MenuHamburLacteosProdsFrescosLechesPolvoYLargaVida(page, context, environment))
+    },
+    menuHamburLacteosProdsFrescosMantecasMargarinasLevaduras: async ({ page, context }, use) => {
+        await use(new MenuHamburLacteosProdsFrescosMantecasMargarinasLevaduras(page, context, environment))
+    },
+    menuHamburLacteosProdsFrescosPAS: async ({ page, context }, use) => {
+        await use(new MenuHamburLacteosProdsFrescosPAS(page, context, environment))
+    },
+    menuHamburLacteosProdsFrescosQuesos: async ({ page, context }, use) => {
+        await use(new MenuHamburLacteosProdsFrescosQuesos(page, context, environment))
+    },
+    menuHamburLacteosProdsFrescosSeco: async ({ page, context }, use) => {
+        await use(new MenuHamburLacteosProdsFrescosSeco(page, context, environment))
     },
 
     // MENU HAMBURGUESA

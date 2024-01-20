@@ -1,10 +1,10 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from '../../MaxiOnLine/commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
+import { BasePage } from '../../../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
-export class MenuHamburLacteosProdsFrescosPostres extends BasePage {
+export class MenuHamburLacteosProdsFrescosPAS extends BasePage {
 
-    readonly POSTRES: Locator
+    readonly PAS: Locator
 
     private env: any
 
@@ -12,16 +12,17 @@ export class MenuHamburLacteosProdsFrescosPostres extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.POSTRES = this.page.locator('//a [@id="menu-item-category-postres"]')
+        this.PAS = this.page.locator("(//div[normalize-space()='p.a.s.'])[1]")
     }
 
-    async clickLacteosProdsFrescosPostres(): Promise<void> {
-        await this.click(this.POSTRES)
+    async clickLacteosProdsFrescosPAS(): Promise<void> {
+        await this.click(this.PAS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
-    async navigateToMenuHamburLacteosProdsFrescosPostres(): Promise<void> {
-        await this.clickLacteosProdsFrescosPostres()
+    async navigateToMenuHamburLacteosProdsFrescosPAS(): Promise<void> {
+        await this.clickLacteosProdsFrescosPAS()
     }
 }

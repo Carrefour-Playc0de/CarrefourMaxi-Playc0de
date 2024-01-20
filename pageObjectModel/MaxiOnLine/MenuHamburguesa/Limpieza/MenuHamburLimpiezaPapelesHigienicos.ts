@@ -2,9 +2,9 @@ import { Page, BrowserContext, Locator, expect } from '@playwright/test'
 import { BasePage } from '../../../commonActions'
 import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
-export class MenuHamburDesayunoMeriendaInfusiones extends BasePage {
+export class MenuHamburLimpiezaPapelesHigienicos extends BasePage {
 
-    readonly INFUSIONES: Locator
+    readonly LIMPIEZA_DE_ROPA: Locator
 
     private env: any
 
@@ -12,16 +12,17 @@ export class MenuHamburDesayunoMeriendaInfusiones extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.INFUSIONES = this.page.locator("(//div[normalize-space()='infusiones'])[1]")
+        this.LIMPIEZA_DE_ROPA = this.page.locator("")
     }
 
-    async clickDesayunoMeriendaInfusiones(): Promise<void> {
-        await this.click(this.INFUSIONES)
+    async clickLimpiezaLimpiezaDeRopa(): Promise<void> {
+        await this.click(this.LIMPIEZA_DE_ROPA)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
-    async navigateToMenuHamburDesayunoMeriendaInfusiones(): Promise<void> {
-        await this.clickDesayunoMeriendaInfusiones()
+    async navigateToMenuHamburLimpiezaLimpiezaDeRopa(): Promise<void> {
+        await this.clickLimpiezaLimpiezaDeRopa()
     }
 }

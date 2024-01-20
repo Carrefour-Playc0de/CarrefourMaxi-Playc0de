@@ -1,6 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from '../../MaxiOnLine/commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
+import { BasePage } from '../../../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
 export class MenuHamburDesayunoMeriendaYerba extends BasePage {
 
@@ -12,7 +12,7 @@ export class MenuHamburDesayunoMeriendaYerba extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.YERBA = this.page.locator('//a [@id="menu-item-category-yerba"]')
+        this.YERBA = this.page.locator("(//div[normalize-space()='yerba'])[1]")
     }
 
     async clickDesayunoMeriendaYerba(): Promise<void> {

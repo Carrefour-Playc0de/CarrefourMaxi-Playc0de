@@ -1,6 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from '../../MaxiOnLine/commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
+import { BasePage } from '../../../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
 export class MenuHamburDesayunoMeriendaVerTodo extends BasePage {
 
@@ -12,7 +12,7 @@ export class MenuHamburDesayunoMeriendaVerTodo extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.DESAYUNO_MERIENDA_VER_TODO = this.page.locator('//span[@class=\'vtex-store-link-0-x-label vtex-store-link-0-x-label--linkHeaderSubmenu\']')
+        this.DESAYUNO_MERIENDA_VER_TODO = this.page.locator("(//div[@onclick=\"gotoPage('sec', 'desayuno_y_merienda')\"][normalize-space()='VER TODO'])[1]")
     }
 
     async clickDesayunoMeriendaVerTodo(): Promise<void> {

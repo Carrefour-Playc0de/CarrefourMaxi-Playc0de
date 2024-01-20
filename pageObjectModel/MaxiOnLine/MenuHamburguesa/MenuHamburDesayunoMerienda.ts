@@ -12,13 +12,12 @@ export class MenuHamburDesayunoMerienda extends BasePage {
     }
 
     async mouseOverDesayunoMerienda(): Promise<void> {
-        let selector = "//div[normalize-space()='desayuno y merienda']"
+        let selector = "(//div[normalize-space()='desayuno y merienda'])[1]"
         await this.page.waitForSelector(selector)
         let element = await this.page.$(selector)
         await element?.hover()
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburDesayunoMerienda(): Promise<void> {

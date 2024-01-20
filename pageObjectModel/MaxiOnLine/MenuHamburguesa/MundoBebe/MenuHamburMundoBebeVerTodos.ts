@@ -1,6 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from '../../MaxiOnLine/commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
+import { BasePage } from '../../../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
 export class MenuHamburMundoBebeVerTodos extends BasePage {
 
@@ -19,6 +19,7 @@ export class MenuHamburMundoBebeVerTodos extends BasePage {
         await this.click(this.MUNDO_BEBE_VER_TODOS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburMundoBebeVerTodos(): Promise<void> {

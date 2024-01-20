@@ -12,13 +12,12 @@ export class MenuHamburLimpieza extends BasePage {
     }
 
     async mouseOverLimpieza(): Promise<void> {
-        let selector = "//div[normalize-space()='limpieza']"
+        let selector = "(//div[normalize-space()='limpieza'])[1]"
         await this.page.waitForSelector(selector)
         let element = await this.page.$(selector)
         await element?.hover()
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburLimpieza(): Promise<void> {

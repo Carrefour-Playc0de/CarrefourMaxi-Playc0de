@@ -1,6 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from '../../MaxiOnLine/commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
+import { BasePage } from '../../../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
 export class MenuHamburLimpiezaVerTodo extends BasePage {
 
@@ -12,13 +12,14 @@ export class MenuHamburLimpiezaVerTodo extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.LIMPIEZA_VER_TODO = this.page.locator('//span[@class=\'vtex-store-link-0-x-label vtex-store-link-0-x-label--linkHeaderSubmenu\']')
+        this.LIMPIEZA_VER_TODO = this.page.locator("(//div[@onclick=\"gotoPage('sec', 'limpieza')\"][normalize-space()='VER TODO'])[1]")
     }
 
     async clickLimpiezaVerTodo(): Promise<void> {
         await this.click(this.LIMPIEZA_VER_TODO)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburLimpiezaVerTodo(): Promise<void> {

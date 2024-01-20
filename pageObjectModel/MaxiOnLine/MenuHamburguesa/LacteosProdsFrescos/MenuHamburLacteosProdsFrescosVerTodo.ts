@@ -1,6 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from '../../MaxiOnLine/commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
+import { BasePage } from '../../../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
 export class MenuHamburLacteosProdsFrescosVerTodo extends BasePage {
     
@@ -12,14 +12,14 @@ export class MenuHamburLacteosProdsFrescosVerTodo extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.LACTEOS_PROD_FRESCOS_VER_TODO = this.page.locator('//span[@class="vtex-store-link-0-x-label vtex-store-link-0-x-label--linkHeaderSubmenu"]')
+        this.LACTEOS_PROD_FRESCOS_VER_TODO = this.page.locator("(//div[@onclick=\"gotoPage('sec', 'lácteos_y_productos_frescos')\"][normalize-space()='VER TODO'])[1]")
     }
 
     async clickLacteosProdsFrescosVerTodo(): Promise<void> {
         await this.click(this.LACTEOS_PROD_FRESCOS_VER_TODO)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(5000)
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburLacteosProdsFrescosVerTodo(): Promise<void> {

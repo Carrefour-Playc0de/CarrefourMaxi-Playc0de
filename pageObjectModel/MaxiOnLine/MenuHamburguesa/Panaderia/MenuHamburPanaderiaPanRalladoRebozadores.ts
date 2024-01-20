@@ -1,6 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from '../../MaxiOnLine/commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
+import { BasePage } from '../../../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
 export class MenuHamburPanaderiaPanRalladoRebozadores extends BasePage {
 
@@ -19,6 +19,7 @@ export class MenuHamburPanaderiaPanRalladoRebozadores extends BasePage {
         await this.click(this.PAN_RALLADO_REBOZADORES)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburPanaderiaPanRalladoRebozadores(): Promise<void> {

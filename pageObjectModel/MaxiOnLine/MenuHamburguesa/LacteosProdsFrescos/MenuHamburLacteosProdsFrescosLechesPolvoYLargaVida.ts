@@ -1,8 +1,8 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from '../../MaxiOnLine/commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
+import { BasePage } from '../../../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
-export class MenuHamburLacteosProdsFrescosLechesPolvo extends BasePage {
+export class MenuHamburLacteosProdsFrescosLechesPolvoYLargaVida extends BasePage {
 
     readonly LECHES_POLVO: Locator
 
@@ -12,16 +12,17 @@ export class MenuHamburLacteosProdsFrescosLechesPolvo extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.LECHES_POLVO = this.page.locator('//a [@id="menu-item-category-leches-polvo"]')
+        this.LECHES_POLVO = this.page.locator("(//div[normalize-space()='leches en polvo y larga vida'])[1]")
     }
 
-    async clickLacteosProdsFrescosLechesPolvo(): Promise<void> {
+    async clickLacteosProdsFrescosLechesPolvoYLargaVida(): Promise<void> {
         await this.click(this.LECHES_POLVO)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
-    async navigateToMenuHamburLacteosProdsFrescosLechesPolvo(): Promise<void> {
-        await this.clickLacteosProdsFrescosLechesPolvo()
+    async navigateToMenuHamburLacteosProdsFrescosLechesPolvoYLargaVida(): Promise<void> {
+        await this.clickLacteosProdsFrescosLechesPolvoYLargaVida()
     }
 }

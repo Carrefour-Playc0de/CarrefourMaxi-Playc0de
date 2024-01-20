@@ -1,6 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from '../../MaxiOnLine/commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
+import { BasePage } from '../../../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
 export class MenuHamburDesayunoMeriendaBudinesMagdalenas extends BasePage {
 
@@ -12,7 +12,7 @@ export class MenuHamburDesayunoMeriendaBudinesMagdalenas extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.BUDINES_MAGDALENAS = this.page.locator('//a [@id="menu-item-category-budines-magdalenas"]')
+        this.BUDINES_MAGDALENAS = this.page.locator("(//div[normalize-space()='budines y magdalenas'])[1]")
     }
 
     async clickDesayunoMeriendaBudinesMagdalenas(): Promise<void> {

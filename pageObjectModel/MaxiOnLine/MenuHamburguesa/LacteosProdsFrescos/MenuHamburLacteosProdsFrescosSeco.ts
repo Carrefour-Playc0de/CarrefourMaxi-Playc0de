@@ -1,10 +1,10 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from '../../MaxiOnLine/commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
+import { BasePage } from '../../../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
-export class MenuHamburLacteosProdsFrescosRicota extends BasePage {
+export class MenuHamburLacteosProdsFrescosSeco extends BasePage {
 
-    readonly RICOTA: Locator
+    readonly SECO: Locator
 
     private env: any
 
@@ -12,16 +12,17 @@ export class MenuHamburLacteosProdsFrescosRicota extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.RICOTA = this.page.locator('//a [@id="menu-item-category-ricota"]')
+        this.SECO = this.page.locator("(//div[normalize-space()='seco'])[1]")
     }
 
-    async clickLacteosProdsFrescosRicota(): Promise<void> {
-        await this.click(this.RICOTA)
+    async clickLacteosProdsFrescosSeco(): Promise<void> {
+        await this.click(this.SECO)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
-    async navigateToMenuHamburLacteosProdsFrescosRicota(): Promise<void> {
-        await this.clickLacteosProdsFrescosRicota()
+    async navigateToMenuHamburLacteosProdsFrescosSeco(): Promise<void> {
+        await this.clickLacteosProdsFrescosSeco()
     }
 }

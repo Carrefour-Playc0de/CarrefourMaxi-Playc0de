@@ -5,13 +5,13 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, menuHamburguesa}) => {
         await cerrarModalTeDamosBienvenida.navigateToMainPageAndCerrarModalTeDamosBienvenida();
     })
     await test.step('Clickear el icono Menu Hamburguesa', async () => {
-        await menuHamburguesa.clickMenuHamburguesa()
+        await menuHamburguesa.navigateToMenuHamburguesa()
     })
 })
 
-test('@Smoke @Regression @MenuHamburguesa (B2C-TC-1094) Verificar que al clickear en Menu Lacteos y Productos Frescos funciona correctamente', async ({menuHamburLacteosProdsFrescos}) => {
+test('@Regression @MenuHamburguesa (B2C-TC-1094) Verificar que al clickear en Menu Lacteos y Productos Frescos funciona correctamente', async ({menuHamburLacteosProdsFrescos}) => {
 
     await test.step('Click en Lacteos y Productos Frescos', async () => {
-        await menuHamburLacteosProdsFrescos.clickLacteosProdsFrescos()
+        await menuHamburLacteosProdsFrescos.navigateToMenuHamburLacteosProdsFrescos()
     })
 })

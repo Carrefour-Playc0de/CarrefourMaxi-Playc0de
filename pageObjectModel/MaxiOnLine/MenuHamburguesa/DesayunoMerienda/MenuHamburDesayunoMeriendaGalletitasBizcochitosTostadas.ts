@@ -1,6 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from '../../MaxiOnLine/commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
+import { BasePage } from '../../../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
 export class MenuHamburDesayunoMeriendaGalletitasBizcochitosTostadas extends BasePage {
 
@@ -12,7 +12,7 @@ export class MenuHamburDesayunoMeriendaGalletitasBizcochitosTostadas extends Bas
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.GALLETITAS_BIZCOCHITOS_TOSTADAS = this.page.locator('//a [@id="menu-item-category-galletitas-bizcochitos-tostadas"]')
+        this.GALLETITAS_BIZCOCHITOS_TOSTADAS = this.page.locator("(//div[normalize-space()='galletitas bizcochitos y tostadas'])[1]")
     }
 
     async clickDesayunoMeriendaGalletitasBizcochitosTostadas(): Promise<void> {

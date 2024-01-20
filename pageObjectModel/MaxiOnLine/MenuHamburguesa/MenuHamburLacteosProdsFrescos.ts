@@ -12,13 +12,12 @@ export class MenuHamburLacteosProdsFrescos extends BasePage {
     }
 
     async mouseOverLacteosProdsFrescos(): Promise<void> {
-        let selector = "//div[normalize-space()='lácteos y productos frescos']"
+        let selector = "(//div[normalize-space()='lácteos y productos frescos'])[1]"
         await this.page.waitForSelector(selector)
         let element = await this.page.$(selector)
         await element?.hover()
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburLacteosProdsFrescos(): Promise<void> {

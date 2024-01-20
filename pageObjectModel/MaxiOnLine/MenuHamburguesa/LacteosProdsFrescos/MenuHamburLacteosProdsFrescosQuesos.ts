@@ -1,6 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from '../../MaxiOnLine/commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
+import { BasePage } from '../../../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
 export class MenuHamburLacteosProdsFrescosQuesos extends BasePage {
 
@@ -12,13 +12,14 @@ export class MenuHamburLacteosProdsFrescosQuesos extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.QUESOS = this.page.locator('//a [@id="menu-item-category-quesos"]')
+        this.QUESOS = this.page.locator("(//div[normalize-space()='quesos'])[1]")
     }
 
     async clickLacteosProdsFrescosQuesos(): Promise<void> {
         await this.click(this.QUESOS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburLacteosProdsFrescosQuesos(): Promise<void> {

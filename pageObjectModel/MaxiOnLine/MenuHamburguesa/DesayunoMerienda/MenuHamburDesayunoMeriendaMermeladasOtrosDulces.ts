@@ -1,6 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test'
-import { BasePage } from '../../MaxiOnLine/commonActions'
-import { loadEnvironmentConfig, loadTestDataConfig } from '../../../config/configLoader'
+import { BasePage } from '../../../commonActions'
+import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
 export class MenuHamburDesayunoMeriendaMermeladasOtrosDulces extends BasePage {
 
@@ -12,7 +12,7 @@ export class MenuHamburDesayunoMeriendaMermeladasOtrosDulces extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.MERMELADAS_OTROS_DULCES = this.page.locator('//a [@id="menu-item-category-dulce-leche-mermelada"]')
+        this.MERMELADAS_OTROS_DULCES = this.page.locator("(//div[normalize-space()='mermeladas y otros dulces'])[1]")
     }
 
     async clickDesayunoMeriendaMermeladasOtrosDulces(): Promise<void> {
