@@ -19,7 +19,6 @@ export class MenuHamburLimpiezaLimpiezaPisosMuebles extends BasePage {
         await this.click(this.LIMPIEZA_PISOS_MUEBLES)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburLimpiezaLimpiezaPisosMuebles(): Promise<void> {

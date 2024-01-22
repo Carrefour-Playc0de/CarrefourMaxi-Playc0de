@@ -12,10 +12,10 @@ export class MenuHamburMascotasAlimentosSnacksPerros extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.ALIMENTOS_SNACKS_PERROS = this.page.locator('')
+        this.ALIMENTOS_SNACKS_PERROS = this.page.locator("(//div[normalize-space()='alimentos y snacks para perros'])[1]")
     }
 
-    async clickMascotasAlimentosSnacksPerros(): Promise<void> {
+    async clickAlimentosSnacksPerros(): Promise<void> {
         await this.click(this.ALIMENTOS_SNACKS_PERROS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
@@ -23,6 +23,6 @@ export class MenuHamburMascotasAlimentosSnacksPerros extends BasePage {
     }
 
     async navigateToMenuHamburMascotasAlimentosSnacksPerros(): Promise<void> {
-        await this.clickMascotasAlimentosSnacksPerros()
+        await this.clickAlimentosSnacksPerros()
     }
 }

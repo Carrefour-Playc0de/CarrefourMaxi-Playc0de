@@ -5,11 +5,11 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, menuHamburguesa}) => {
         await cerrarModalTeDamosBienvenida.navigateToMainPageAndCerrarModalTeDamosBienvenida();
     })
     await test.step('Clickear el icono Menu Hamburguesa', async () => {
-        await menuHamburguesa.clickMenuHamburguesa()
+        await menuHamburguesa.navigateToMenuHamburguesa()
     })
 })
 
-test('@Smoke @Regression @MenuHamburguesa (B2C-TC-1106) Verificar que al clickear en Menu Mascotas funciona correctamente', async ({menuHamburMascotas}) => {
+test('@Test @Regression @MenuHamburguesa (B2C-TC-1106) Verificar que al clickear en Menu Mascotas funciona correctamente', async ({menuHamburMascotas}) => {
 
     await test.step('Click en Mascotas', async () => {
         await menuHamburMascotas.clickMascotas()

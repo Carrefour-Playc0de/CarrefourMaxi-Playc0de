@@ -19,7 +19,6 @@ export class MenuHamburLimpiezaVerTodo extends BasePage {
         await this.click(this.LIMPIEZA_VER_TODO)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburLimpiezaVerTodo(): Promise<void> {
