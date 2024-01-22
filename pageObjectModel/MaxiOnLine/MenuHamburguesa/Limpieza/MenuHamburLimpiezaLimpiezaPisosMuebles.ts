@@ -4,7 +4,7 @@ import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/co
 
 export class MenuHamburLimpiezaLimpiezaPisosMuebles extends BasePage {
 
-    readonly LIMPIEZA_DE_ROPA: Locator
+    readonly LIMPIEZA_PISOS_MUEBLES: Locator
 
     private env: any
 
@@ -12,17 +12,17 @@ export class MenuHamburLimpiezaLimpiezaPisosMuebles extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.LIMPIEZA_DE_ROPA = this.page.locator("")
+        this.LIMPIEZA_PISOS_MUEBLES = this.page.locator("(//div[normalize-space()='limpieza de pisos y muebles'])[1]")
     }
 
-    async clickLimpiezaLimpiezaDeRopa(): Promise<void> {
-        await this.click(this.LIMPIEZA_DE_ROPA)
+    async clickLimpiezaPisosMuebles(): Promise<void> {
+        await this.click(this.LIMPIEZA_PISOS_MUEBLES)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
         await this.page.waitForTimeout(3000)
     }
 
-    async navigateToMenuHamburLimpiezaLimpiezaDeRopa(): Promise<void> {
-        await this.clickLimpiezaLimpiezaDeRopa()
+    async navigateToMenuHamburLimpiezaLimpiezaPisosMuebles(): Promise<void> {
+        await this.clickLimpiezaPisosMuebles()
     }
 }

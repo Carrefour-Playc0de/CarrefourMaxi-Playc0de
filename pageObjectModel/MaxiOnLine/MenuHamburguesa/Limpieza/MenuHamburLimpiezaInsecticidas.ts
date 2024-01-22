@@ -4,7 +4,7 @@ import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/co
 
 export class MenuHamburLimpiezaInsecticidas extends BasePage {
 
-    readonly LIMPIEZA_DE_ROPA: Locator
+    readonly INSECTICIDAS: Locator
 
     private env: any
 
@@ -12,17 +12,17 @@ export class MenuHamburLimpiezaInsecticidas extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.LIMPIEZA_DE_ROPA = this.page.locator("")
+        this.INSECTICIDAS = this.page.locator("(//div[normalize-space()='insecticidas'])[1]")
     }
 
-    async clickLimpiezaLimpiezaDeRopa(): Promise<void> {
-        await this.click(this.LIMPIEZA_DE_ROPA)
+    async clickInsecticidas(): Promise<void> {
+        await this.click(this.INSECTICIDAS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
         await this.page.waitForTimeout(3000)
     }
 
-    async navigateToMenuHamburLimpiezaLimpiezaDeRopa(): Promise<void> {
-        await this.clickLimpiezaLimpiezaDeRopa()
+    async navigateToMenuHamburLimpiezaInsecticidas(): Promise<void> {
+        await this.clickInsecticidas()
     }
 }

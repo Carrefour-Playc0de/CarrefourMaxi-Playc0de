@@ -211,6 +211,36 @@ import {
 import {
     MenuHamburLimpiezaVerTodo
 } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Limpieza/MenuHamburLimpiezaVerTodo'
+import {
+    MenuHamburLimpiezaArticulosLimpieza
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Limpieza/MenuHamburLimpiezaArticulosLimpieza'
+import {
+    MenuHamburLimpiezaDesodorantesAmbiente
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Limpieza/MenuHamburLimpiezaDesodorantesAmbiente'
+import {
+    MenuHamburLimpiezaInsecticidas
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Limpieza/MenuHamburLimpiezaInsecticidas'
+import {
+    MenuHamburLimpiezaLavandinas
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Limpieza/MenuHamburLimpiezaLavandinas'
+import {
+    MenuHamburLimpiezaLimpiezaBanio
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Limpieza/MenuHamburLimpiezaLimpiezaBanio'
+import {
+    MenuHamburLimpiezaLimpiezaCocina
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Limpieza/MenuHamburLimpiezaLimpiezaCocina'
+import {
+    MenuHamburLimpiezaLimpiezaPisosMuebles
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Limpieza/MenuHamburLimpiezaLimpiezaPisosMuebles'
+import {
+    MenuHamburLimpiezaLimpiezaRopa
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Limpieza/MenuHamburLimpiezaLimpiezaRopa'
+import {
+    MenuHamburLimpiezaPapelesHigienicos
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Limpieza/MenuHamburLimpiezaPapelesHigienicos'
+import {
+    MenuHamburLimpiezaRollosCocinaServilletas
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Limpieza/MenuHamburLimpiezaRollosCocinaServilletas'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -307,6 +337,16 @@ const test = baseTest.extend<{
     menuHamburLacteosProdsFrescosQuesos: MenuHamburLacteosProdsFrescosQuesos
     menuHamburLacteosProdsFrescosSeco: MenuHamburLacteosProdsFrescosSeco
     menuHamburLimpiezaVerTodo: MenuHamburLimpiezaVerTodo
+    menuHamburLimpiezaArticulosLimpieza: MenuHamburLimpiezaArticulosLimpieza
+    menuHamburLimpiezaDesodorantesAmbiente: MenuHamburLimpiezaDesodorantesAmbiente
+    menuHamburLimpiezaInsecticidas: MenuHamburLimpiezaInsecticidas
+    menuHamburLimpiezaLavandinas: MenuHamburLimpiezaLavandinas
+    menuHamburLimpiezaLimpiezaBanio: MenuHamburLimpiezaLimpiezaBanio
+    menuHamburLimpiezaLimpiezaCocina: MenuHamburLimpiezaLimpiezaCocina
+    menuHamburLimpiezaLimpiezaPisosMuebles: MenuHamburLimpiezaLimpiezaPisosMuebles
+    menuHamburLimpiezaLimpiezaRopa: MenuHamburLimpiezaLimpiezaRopa
+    menuHamburLimpiezaPapelesHigienicos: MenuHamburLimpiezaPapelesHigienicos
+    menuHamburLimpiezaRollosCocinaServilletas: MenuHamburLimpiezaRollosCocinaServilletas
 
 
 }>({
@@ -328,6 +368,36 @@ const test = baseTest.extend<{
     // MENU HAMBURGUESA - LIMPIEZA
     menuHamburLimpiezaVerTodo: async ({ page, context }, use) => {
         await use(new MenuHamburLimpiezaVerTodo(page, context, environment))
+    },
+    menuHamburLimpiezaArticulosLimpieza: async ({ page, context }, use) => {
+        await use(new MenuHamburLimpiezaArticulosLimpieza(page, context, environment))
+    },
+    menuHamburLimpiezaDesodorantesAmbiente: async ({ page, context }, use) => {
+        await use(new MenuHamburLimpiezaDesodorantesAmbiente(page, context, environment))
+    },
+    menuHamburLimpiezaInsecticidas: async ({ page, context }, use) => {
+        await use(new MenuHamburLimpiezaInsecticidas(page, context, environment))
+    },
+    menuHamburLimpiezaLavandinas: async ({ page, context }, use) => {
+        await use(new MenuHamburLimpiezaLavandinas(page, context, environment))
+    },
+    menuHamburLimpiezaLimpiezaBanio: async ({ page, context }, use) => {
+        await use(new MenuHamburLimpiezaLimpiezaBanio(page, context, environment))
+    },
+    menuHamburLimpiezaLimpiezaCocina: async ({ page, context }, use) => {
+        await use(new MenuHamburLimpiezaLimpiezaCocina(page, context, environment))
+    },
+    menuHamburLimpiezaLimpiezaPisosMuebles: async ({ page, context }, use) => {
+        await use(new MenuHamburLimpiezaLimpiezaPisosMuebles(page, context, environment))
+    },
+    menuHamburLimpiezaLimpiezaRopa: async ({ page, context }, use) => {
+        await use(new MenuHamburLimpiezaLimpiezaRopa(page, context, environment))
+    },
+    menuHamburLimpiezaPapelesHigienicos: async ({ page, context }, use) => {
+        await use(new MenuHamburLimpiezaPapelesHigienicos(page, context, environment))
+    },
+    menuHamburLimpiezaRollosCocinaServilletas: async ({ page, context }, use) => {
+        await use(new MenuHamburLimpiezaRollosCocinaServilletas(page, context, environment))
     },
 
 
