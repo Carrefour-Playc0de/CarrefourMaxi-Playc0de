@@ -12,14 +12,13 @@ export class MenuHamburMundoBebePaniales extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.PANIALES = this.page.locator('')
+        this.PANIALES = this.page.locator("(//div[normalize-space()='pañales'])[1]")
     }
 
     async clickMundoBebePaniales(): Promise<void> {
         await this.click(this.PANIALES)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburMundoBebePaniales(): Promise<void> {

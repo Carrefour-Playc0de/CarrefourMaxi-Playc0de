@@ -18,7 +18,6 @@ export class MenuHamburMascotas extends BasePage {
         await element?.hover()
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburMascotas(): Promise<void> {

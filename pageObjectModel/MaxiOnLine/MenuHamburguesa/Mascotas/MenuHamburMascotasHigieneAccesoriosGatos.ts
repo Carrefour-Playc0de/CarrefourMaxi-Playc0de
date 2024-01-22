@@ -19,10 +19,9 @@ export class MenuHamburMascotasHigieneAccesoriosGatos extends BasePage {
         await this.click(this.HIGIENE_ACCESORIOS_GATOS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
-    async MenuHamburMascotasHigieneAccesoriosGatos(): Promise<void> {
+    async navigateToMenuHamburMascotasHigieneAccesoriosGatos(): Promise<void> {
         await this.clickHigieneAccesoriosGatos()
     }
 }

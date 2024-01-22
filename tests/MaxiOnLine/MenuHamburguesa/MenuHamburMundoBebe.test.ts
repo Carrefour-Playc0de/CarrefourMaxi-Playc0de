@@ -5,13 +5,13 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, menuHamburguesa}) => {
         await cerrarModalTeDamosBienvenida.navigateToMainPageAndCerrarModalTeDamosBienvenida();
     })
     await test.step('Clickear el icono Menu Hamburguesa', async () => {
-        await menuHamburguesa.clickMenuHamburguesa()
+        await menuHamburguesa.navigateToMenuHamburguesa()
     })
 })
 
-test('@Smoke @Regression @MenuHamburguesa (B2C-TC-1108) Verificar que al clickear en Menu Mundo Bebe funciona correctamente', async ({menuHamburMundoBebe}) => {
+test('@Regression @MenuHamburguesa (B2C-TC-1108) Verificar que al clickear en Menu Mundo Bebe funciona correctamente', async ({menuHamburMundoBebe}) => {
 
     await test.step('Click en Mundo Bebe', async () => {
-        await menuHamburMundoBebe.clickMundoBebe()
+        await menuHamburMundoBebe.navigateToMenuHamburMundoBebe()
     })
 })

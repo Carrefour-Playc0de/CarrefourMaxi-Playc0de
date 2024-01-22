@@ -1,20 +1,38 @@
 import test from '../../../../config/testManager'
 
-test.beforeEach(async ({cerrarModalTeDamosBienvenida, menuHamburguesa, menuHamburLimpieza}) => {
+test.beforeEach(async ({cerrarModalTeDamosBienvenida, menuHamburguesa, menuHamburMascotas}) => {
     await test.step('Click en la X del modal Te Damos la Bienvenida', async () => {
         await cerrarModalTeDamosBienvenida.navigateToMainPageAndCerrarModalTeDamosBienvenida();
     })
     await test.step('Clickear el icono Menu Hamburguesa', async () => {
         await menuHamburguesa.navigateToMenuHamburguesa()
     })
-    await test.step('Click en Limpieza', async () => {
-        await menuHamburLimpieza.navigateToMenuHamburLimpieza()
+    await test.step('Click en Mascotas', async () => {
+        await menuHamburMascotas.navigateToMenuHamburMascotas()
     })
 })
 
-test('@Test @Regression @MenuHamburguesa (B2C-TC-1112) Verificar que funciona el Menu Mascotas: VER TODO', async ({menuHamburMascotasVerTodos}) => {
+test('@Regression @MenuHamburguesa (B2C-TC-1112) Verificar que funciona el Menu Mascotas: VER TODO', async ({menuHamburMascotasVerTodos}) => {
 
     await test.step('Click en Mascotas VER TODO', async () => {
-        await menuHamburMascotasVerTodos.clickMascotasVerTodos()
+        await menuHamburMascotasVerTodos.navigateToMenuHamburMascotasVerTodos()
+    })
+})
+test('@Regression @MenuHamburguesa (B2C-TC-1112) Verificar que funciona el Menu Mascotas: Alimentos para Gatos', async ({menuHamburMascotasAlimentosGatos}) => {
+
+    await test.step('Click en Alimentos para Gatos', async () => {
+        await menuHamburMascotasAlimentosGatos.navigateToMenuHamburMascotasAlimentosGatos()
+    })
+})
+test('@Regression @MenuHamburguesa (B2C-TC-1112) Verificar que funciona el Menu Mascotas: Alimentos y Snacks para Perros', async ({menuHamburMascotasAlimentosSnacksPerros}) => {
+
+    await test.step('Click en Alimentos y Snacks para Perros', async () => {
+        await menuHamburMascotasAlimentosSnacksPerros.navigateToMenuHamburMascotasAlimentosSnacksPerros()
+    })
+})
+test('@Regression @MenuHamburguesa (B2C-TC-1112) Verificar que funciona el Menu Mascotas: Higiene y Accesorios para Gatos', async ({menuHamburMascotasHigieneAccesoriosGatos}) => {
+
+    await test.step('Click en Higiene y Accesorios para Gatos', async () => {
+        await menuHamburMascotasHigieneAccesoriosGatos.navigateToMenuHamburMascotasHigieneAccesoriosGatos()
     })
 })

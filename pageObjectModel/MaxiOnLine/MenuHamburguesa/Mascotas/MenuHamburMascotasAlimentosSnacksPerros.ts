@@ -19,7 +19,6 @@ export class MenuHamburMascotasAlimentosSnacksPerros extends BasePage {
         await this.click(this.ALIMENTOS_SNACKS_PERROS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburMascotasAlimentosSnacksPerros(): Promise<void> {

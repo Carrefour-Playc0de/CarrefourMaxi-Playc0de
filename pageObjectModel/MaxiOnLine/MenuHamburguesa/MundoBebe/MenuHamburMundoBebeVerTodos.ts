@@ -12,14 +12,13 @@ export class MenuHamburMundoBebeVerTodos extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.MUNDO_BEBE_VER_TODOS = this.page.locator('//span[@class=\'vtex-store-link-0-x-label vtex-store-link-0-x-label--linkHeaderSubmenu\']')
+        this.MUNDO_BEBE_VER_TODOS = this.page.locator("(//div[@onclick=\"gotoPage('sec', 'mundo_bebé')\"][normalize-space()='VER TODO'])[1]")
     }
 
     async clickMundoBebeVerTodos(): Promise<void> {
         await this.click(this.MUNDO_BEBE_VER_TODOS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburMundoBebeVerTodos(): Promise<void> {

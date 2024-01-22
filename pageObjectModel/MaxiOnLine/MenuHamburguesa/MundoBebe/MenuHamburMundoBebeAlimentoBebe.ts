@@ -2,9 +2,9 @@ import { Page, BrowserContext, Locator, expect } from '@playwright/test'
 import { BasePage } from '../../../commonActions'
 import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
-export class MenuHamburMascotasVerTodos extends BasePage {
+export class MenuHamburMundoBebeAlimentoBebe extends BasePage {
 
-    readonly MASCOTAS_VER_TODOS: Locator
+    readonly ALIMENTO_BEBE: Locator
 
     private env: any
 
@@ -12,16 +12,16 @@ export class MenuHamburMascotasVerTodos extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.MASCOTAS_VER_TODOS = this.page.locator("(//div[@onclick=\"gotoPage('sec', 'mascotas')\"][normalize-space()='VER TODO'])[1]")
+        this.ALIMENTO_BEBE = this.page.locator("(//div[normalize-space()='alimento para bebé'])[1]")
     }
 
-    async clickMascotasVerTodos(): Promise<void> {
-        await this.click(this.MASCOTAS_VER_TODOS)
+    async clickMundoBebeAlimentoBebe(): Promise<void> {
+        await this.click(this.ALIMENTO_BEBE)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
     }
 
-    async navigateToMenuHamburMascotasVerTodos(): Promise<void> {
-        await this.clickMascotasVerTodos()
+    async navigateToMenuHamburMundoBebeAlimentoBebe(): Promise<void> {
+        await this.clickMundoBebeAlimentoBebe()
     }
 }
