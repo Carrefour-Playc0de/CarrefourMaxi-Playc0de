@@ -12,14 +12,13 @@ export class MenuHamburPanaderiaPanRalladoRebozadores extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.PAN_RALLADO_REBOZADORES = this.page.locator('//a [@id="menu-item-category-pan-rallado-rebozadores"]')
+        this.PAN_RALLADO_REBOZADORES = this.page.locator("(//div[normalize-space()='pan rallado y rebozadores'])[1]")
     }
 
     async clickPanaderiaPanRalladoRebozadores(): Promise<void> {
         await this.click(this.PAN_RALLADO_REBOZADORES)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburPanaderiaPanRalladoRebozadores(): Promise<void> {

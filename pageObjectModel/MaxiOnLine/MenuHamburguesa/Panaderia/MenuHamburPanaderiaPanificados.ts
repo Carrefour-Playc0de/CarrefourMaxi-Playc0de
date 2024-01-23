@@ -12,14 +12,13 @@ export class MenuHamburPanaderiaPanificados extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.PANIFICADOS = this.page.locator('//a [@id="menu-item-category-panificados"]')
+        this.PANIFICADOS = this.page.locator("(//div[normalize-space()='panificados'])[1]")
     }
 
     async clickPanaderiaPanificados(): Promise<void> {
         await this.click(this.PANIFICADOS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburPanaderiaPanificados(): Promise<void> {

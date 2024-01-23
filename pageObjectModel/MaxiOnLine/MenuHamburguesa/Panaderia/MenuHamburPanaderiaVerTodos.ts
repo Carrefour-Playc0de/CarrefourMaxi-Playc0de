@@ -12,14 +12,13 @@ export class MenuHamburPanaderiaVerTodos extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.PANADERIA_VER_TODOS = this.page.locator('//span[@class=\'vtex-store-link-0-x-label vtex-store-link-0-x-label--linkHeaderSubmenu\']')
+        this.PANADERIA_VER_TODOS = this.page.locator("(//div[@onclick=\"gotoPage('sec', 'panadería')\"][normalize-space()='VER TODO'])[1]")
     }
 
     async clickPanaderiaVerTodos(): Promise<void> {
         await this.click(this.PANADERIA_VER_TODOS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburPanaderiaVerTodos(): Promise<void> {

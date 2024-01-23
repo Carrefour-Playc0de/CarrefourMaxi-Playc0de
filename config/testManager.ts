@@ -271,6 +271,15 @@ import {
 import {
     MenuHamburMundoBebeToallitasHumedas
 } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/MundoBebe/MenuHamburMundoBebeToallitasHumedas'
+import {
+    MenuHamburPanaderiaVerTodos
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Panaderia/MenuHamburPanaderiaVerTodos'
+import {
+    MenuHamburPanaderiaPanRalladoRebozadores
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Panaderia/MenuHamburPanaderiaPanRalladoRebozadores'
+import {
+    MenuHamburPanaderiaPanificados
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Panaderia/MenuHamburPanaderiaPanificados'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -387,6 +396,9 @@ const test = baseTest.extend<{
     menuHamburMundoBebePaniales: MenuHamburMundoBebePaniales
     menuHamburMundoBebeParaElBanio: MenuHamburMundoBebeParaElBanio
     menuHamburMundoBebeToallitasHumedas: MenuHamburMundoBebeToallitasHumedas
+    menuHamburPanaderiaVerTodos: MenuHamburPanaderiaVerTodos
+    menuHamburPanaderiaPanRalladoRebozadores: MenuHamburPanaderiaPanRalladoRebozadores
+    menuHamburPanaderiaPanificados: MenuHamburPanaderiaPanificados
 
 
 }>({
@@ -404,26 +416,20 @@ const test = baseTest.extend<{
         await use(new IngresarCuenta(page, context, environment))
     },
 
+    // MENU HAMBURGUESA - PANADERIA
+    menuHamburPanaderiaVerTodos: async ({ page, context }, use) => {
+        await use(new MenuHamburPanaderiaVerTodos(page, context, environment))
+    },
+    menuHamburPanaderiaPanRalladoRebozadores: async ({ page, context }, use) => {
+        await use(new MenuHamburPanaderiaPanRalladoRebozadores(page, context, environment))
+    },
+    menuHamburPanaderiaPanificados: async ({ page, context }, use) => {
+        await use(new MenuHamburPanaderiaPanificados(page, context, environment))
+    },
 
-    // MENU HAMBURGUESA - MUNDO BEBE
-    menuHamburMundoBebeVerTodos: async ({ page, context }, use) => {
-        await use(new MenuHamburMundoBebeVerTodos(page, context, environment))
-    },
-    menuHamburMundoBebeAlimentoBebe: async ({ page, context }, use) => {
-        await use(new MenuHamburMundoBebeAlimentoBebe(page, context, environment))
-    },
-    menuHamburMundoBebeDespuesBanio: async ({ page, context }, use) => {
-        await use(new MenuHamburMundoBebeDespuesBanio(page, context, environment))
-    },
-    menuHamburMundoBebePaniales: async ({ page, context }, use) => {
-        await use(new MenuHamburMundoBebePaniales(page, context, environment))
-    },
-    menuHamburMundoBebeParaElBanio: async ({ page, context }, use) => {
-        await use(new MenuHamburMundoBebeParaElBanio(page, context, environment))
-    },
-    menuHamburMundoBebeToallitasHumedas: async ({ page, context }, use) => {
-        await use(new MenuHamburMundoBebeToallitasHumedas(page, context, environment))
-    },
+
+
+
 
 
 
@@ -658,6 +664,26 @@ const test = baseTest.extend<{
     },
     menuHamburMascotasHigieneAccesoriosGatos: async ({ page, context }, use) => {
         await use(new MenuHamburMascotasHigieneAccesoriosGatos(page, context, environment))
+    },
+
+    // MENU HAMBURGUESA - MUNDO BEBE
+    menuHamburMundoBebeVerTodos: async ({ page, context }, use) => {
+        await use(new MenuHamburMundoBebeVerTodos(page, context, environment))
+    },
+    menuHamburMundoBebeAlimentoBebe: async ({ page, context }, use) => {
+        await use(new MenuHamburMundoBebeAlimentoBebe(page, context, environment))
+    },
+    menuHamburMundoBebeDespuesBanio: async ({ page, context }, use) => {
+        await use(new MenuHamburMundoBebeDespuesBanio(page, context, environment))
+    },
+    menuHamburMundoBebePaniales: async ({ page, context }, use) => {
+        await use(new MenuHamburMundoBebePaniales(page, context, environment))
+    },
+    menuHamburMundoBebeParaElBanio: async ({ page, context }, use) => {
+        await use(new MenuHamburMundoBebeParaElBanio(page, context, environment))
+    },
+    menuHamburMundoBebeToallitasHumedas: async ({ page, context }, use) => {
+        await use(new MenuHamburMundoBebeToallitasHumedas(page, context, environment))
     },
 
 
