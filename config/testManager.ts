@@ -280,6 +280,42 @@ import {
 import {
     MenuHamburPanaderiaPanificados
 } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Panaderia/MenuHamburPanaderiaPanificados'
+import {
+    MenuHamburPerfumeriaVerTodos
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Perfumeria/MenuHamburPerfumeriaVerTodos'
+import {
+    MenuHamburPerfumeriaAlgodonesHisopos
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Perfumeria/MenuHamburPerfumeriaAlgodonesHisopos'
+import {
+    MenuHamburPerfumeriaAntitranspirantesDesodorantes
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Perfumeria/MenuHamburPerfumeriaAntitranspirantesDesodorantes'
+import {
+    MenuHamburPerfumeriaCuidadoCorporal
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Perfumeria/MenuHamburPerfumeriaCuidadoCorporal'
+import {
+    MenuHamburPerfumeriaCuidadoPiel
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Perfumeria/MenuHamburPerfumeriaCuidadoPiel'
+import {
+    MenuHamburPerfumeriaCuidadoDelCabello
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Perfumeria/MenuHamburPerfumeriaCuidadoDelCabello'
+import {
+    MenuHamburPerfumeriaCuidadoDental
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Perfumeria/MenuHamburPerfumeriaCuidadoDental'
+import {
+    MenuHamburPerfumeriaFarmacia
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Perfumeria/MenuHamburPerfumeriaFarmacia'
+import {
+    MenuHamburPerfumeriaJabones
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Perfumeria/MenuHamburPerfumeriaJabones'
+import {
+    MenuHamburPerfumeriaProteccionFemenina
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Perfumeria/MenuHamburPerfumeriaProteccionFemenina'
+import {
+    MenuHamburPerfumeriaProteccionAdultos
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Perfumeria/MenuHamburPerfumeriaProteccionAdultos'
+import {
+    MenuHamburPerfumeriaRepelentes
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Perfumeria/MenuHamburPerfumeriaRepelentes'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -399,7 +435,18 @@ const test = baseTest.extend<{
     menuHamburPanaderiaVerTodos: MenuHamburPanaderiaVerTodos
     menuHamburPanaderiaPanRalladoRebozadores: MenuHamburPanaderiaPanRalladoRebozadores
     menuHamburPanaderiaPanificados: MenuHamburPanaderiaPanificados
-
+    menuHamburPerfumeriaVerTodos: MenuHamburPerfumeriaVerTodos
+    menuHamburPerfumeriaAlgodonesHisopos: MenuHamburPerfumeriaAlgodonesHisopos
+    menuHamburPerfumeriaAntitranspirantesDesodorantes: MenuHamburPerfumeriaAntitranspirantesDesodorantes
+    menuHamburPerfumeriaCuidadoCorporal: MenuHamburPerfumeriaCuidadoCorporal
+    menuHamburPerfumeriaCuidadoPiel: MenuHamburPerfumeriaCuidadoPiel
+    menuHamburPerfumeriaCuidadoDelCabello: MenuHamburPerfumeriaCuidadoDelCabello
+    menuHamburPerfumeriaCuidadoDental: MenuHamburPerfumeriaCuidadoDental
+    menuHamburPerfumeriaFarmacia: MenuHamburPerfumeriaFarmacia
+    menuHamburPerfumeriaJabones: MenuHamburPerfumeriaJabones
+    menuHamburPerfumeriaProteccionFemenina: MenuHamburPerfumeriaProteccionFemenina
+    menuHamburPerfumeriaProteccionAdultos: MenuHamburPerfumeriaProteccionAdultos
+    menuHamburPerfumeriaRepelentes: MenuHamburPerfumeriaRepelentes
 
 }>({
     // LOGIN PAGE
@@ -415,19 +462,6 @@ const test = baseTest.extend<{
     ingresarCuenta: async ({ page, context }, use) => {
         await use(new IngresarCuenta(page, context, environment))
     },
-
-    // MENU HAMBURGUESA - PANADERIA
-    menuHamburPanaderiaVerTodos: async ({ page, context }, use) => {
-        await use(new MenuHamburPanaderiaVerTodos(page, context, environment))
-    },
-    menuHamburPanaderiaPanRalladoRebozadores: async ({ page, context }, use) => {
-        await use(new MenuHamburPanaderiaPanRalladoRebozadores(page, context, environment))
-    },
-    menuHamburPanaderiaPanificados: async ({ page, context }, use) => {
-        await use(new MenuHamburPanaderiaPanificados(page, context, environment))
-    },
-
-
 
 
 
@@ -684,6 +718,55 @@ const test = baseTest.extend<{
     },
     menuHamburMundoBebeToallitasHumedas: async ({ page, context }, use) => {
         await use(new MenuHamburMundoBebeToallitasHumedas(page, context, environment))
+    },
+
+    // MENU HAMBURGUESA - PANADERIA
+    menuHamburPanaderiaVerTodos: async ({ page, context }, use) => {
+        await use(new MenuHamburPanaderiaVerTodos(page, context, environment))
+    },
+    menuHamburPanaderiaPanRalladoRebozadores: async ({ page, context }, use) => {
+        await use(new MenuHamburPanaderiaPanRalladoRebozadores(page, context, environment))
+    },
+    menuHamburPanaderiaPanificados: async ({ page, context }, use) => {
+        await use(new MenuHamburPanaderiaPanificados(page, context, environment))
+    },
+
+    // MENU HAMBURGUESA - PERFUMERIA
+    menuHamburPerfumeriaVerTodos: async ({ page, context }, use) => {
+        await use(new MenuHamburPerfumeriaVerTodos(page, context, environment))
+    },
+    menuHamburPerfumeriaAlgodonesHisopos: async ({ page, context }, use) => {
+        await use(new MenuHamburPerfumeriaAlgodonesHisopos(page, context, environment))
+    },
+    menuHamburPerfumeriaAntitranspirantesDesodorantes: async ({ page, context }, use) => {
+        await use(new MenuHamburPerfumeriaAntitranspirantesDesodorantes(page, context, environment))
+    },
+    menuHamburPerfumeriaCuidadoCorporal: async ({ page, context }, use) => {
+        await use(new MenuHamburPerfumeriaCuidadoCorporal(page, context, environment))
+    },
+    menuHamburPerfumeriaCuidadoPiel: async ({ page, context }, use) => {
+        await use(new MenuHamburPerfumeriaCuidadoPiel(page, context, environment))
+    },
+    menuHamburPerfumeriaCuidadoDelCabello: async ({ page, context }, use) => {
+        await use(new MenuHamburPerfumeriaCuidadoDelCabello(page, context, environment))
+    },
+    menuHamburPerfumeriaCuidadoDental: async ({ page, context }, use) => {
+        await use(new MenuHamburPerfumeriaCuidadoDental(page, context, environment))
+    },
+    menuHamburPerfumeriaFarmacia: async ({ page, context }, use) => {
+        await use(new MenuHamburPerfumeriaFarmacia(page, context, environment))
+    },
+    menuHamburPerfumeriaJabones: async ({ page, context }, use) => {
+        await use(new MenuHamburPerfumeriaJabones(page, context, environment))
+    },
+    menuHamburPerfumeriaProteccionFemenina: async ({ page, context }, use) => {
+        await use(new MenuHamburPerfumeriaProteccionFemenina(page, context, environment))
+    },
+    menuHamburPerfumeriaProteccionAdultos: async ({ page, context }, use) => {
+        await use(new MenuHamburPerfumeriaProteccionAdultos(page, context, environment))
+    },
+    menuHamburPerfumeriaRepelentes: async ({ page, context }, use) => {
+        await use(new MenuHamburPerfumeriaRepelentes(page, context, environment))
     },
 
 

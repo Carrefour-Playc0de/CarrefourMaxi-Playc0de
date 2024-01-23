@@ -2,25 +2,25 @@ import { Page, BrowserContext, Locator, expect } from '@playwright/test'
 import { BasePage } from '../../../commonActions'
 import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
-export class MenuHamburPerfumeriaCuidadoDelCabello extends BasePage {
+export class MenuHamburPerfumeriaAlgodonesHisopos extends BasePage {
 
-    readonly CUIDADO_CABELLO: Locator
+    readonly ALGODONES_HISOPOS: Locator
 
     private env: any
     constructor(page: Page, context: BrowserContext, environment: string) {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.CUIDADO_CABELLO = this.page.locator("(//div[normalize-space()='cuidado del cabello'])[1]")
+        this.ALGODONES_HISOPOS = this.page.locator("(//div[normalize-space()='algodones e hisopos'])[1]")
     }
 
-    async clickPerfumeriaCuidadoDelCabello(): Promise<void> {
-        await this.click(this.CUIDADO_CABELLO)
+    async clickPerfumeriaAlgodonesHisopos(): Promise<void> {
+        await this.click(this.ALGODONES_HISOPOS)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
     }
 
-    async navigateToMenuHamburPerfumeriaCuidadoDelCabello(): Promise<void> {
-        await this.clickPerfumeriaCuidadoDelCabello()
+    async navigateToMenuHamburPerfumeriaAlgodonesHisopos(): Promise<void> {
+        await this.clickPerfumeriaAlgodonesHisopos()
     }
 }
