@@ -316,6 +316,13 @@ import {
 import {
     MenuHamburPerfumeriaRepelentes
 } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Perfumeria/MenuHamburPerfumeriaRepelentes'
+import {
+    MenuHamburOfertasVerTodos
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Ofertas/MenuHamburOfertasVerTodos'
+import { MenuHamburOfertas } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/MenuHamburOfertas'
+import {
+    MenuHamburOfertasEspecialesDelDia
+} from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Ofertas/MenuHamburOfertasEspecialesDelDia'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -447,6 +454,9 @@ const test = baseTest.extend<{
     menuHamburPerfumeriaProteccionFemenina: MenuHamburPerfumeriaProteccionFemenina
     menuHamburPerfumeriaProteccionAdultos: MenuHamburPerfumeriaProteccionAdultos
     menuHamburPerfumeriaRepelentes: MenuHamburPerfumeriaRepelentes
+    menuHamburOfertasVerTodos: MenuHamburOfertasVerTodos
+    menuHamburOfertas: MenuHamburOfertas
+    menuHamburOfertasEspecialesDelDia: MenuHamburOfertasEspecialesDelDia
 
 }>({
     // LOGIN PAGE
@@ -468,9 +478,14 @@ const test = baseTest.extend<{
 
 
 
+
+
     // MENU HAMBURGUESA
     menuHamburguesa: async ({ page, context }, use) => {
         await use(new MenuHamburguesa(page, context, environment))
+    },
+    menuHamburOfertas: async ({ page, context }, use) => {
+        await use(new MenuHamburOfertas(page, context, environment))
     },
     menuHamburAlmacen: async ({ page, context }, use) => {
         await use(new MenuHamburAlmacen(page, context, environment))
@@ -501,6 +516,14 @@ const test = baseTest.extend<{
     },
     menuHamburPerfumeria: async ({ page, context }, use) => {
         await use(new MenuHamburPerfumeria(page, context, environment))
+    },
+
+    // MENU HAMBURGUESA - OFERTAS
+    menuHamburOfertasVerTodos: async ({ page, context }, use) => {
+        await use(new MenuHamburOfertasVerTodos(page, context, environment))
+    },
+    menuHamburOfertasEspecialesDelDia: async ({ page, context }, use) => {
+        await use(new MenuHamburOfertasEspecialesDelDia(page, context, environment))
     },
 
     // MENU HAMBURGUESA - ALMACEN

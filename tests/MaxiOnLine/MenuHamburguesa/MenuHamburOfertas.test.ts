@@ -9,9 +9,9 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, menuHamburguesa}) => {
     })
 })
 
-test('@Regression @MenuHamburguesa (TS-31) Verificar que al clickear en Menu Almacen funciona correctamente', async ({menuHamburAlmacen}) => {
+test('@Regression @MenuHamburguesa (TS-31) Verificar que al clickear en Menu Ofertas funciona correctamente', async ({menuHamburOfertas}) => {
 
-    await test.step('Click en Almacen', async () => {
-        await menuHamburAlmacen.navigateToMenuHamburAlmacen()
+    await test.step('Click en Ofertas', async () => {
+        await menuHamburOfertas.navigateToMenuHamburOfertas()
     })
 })

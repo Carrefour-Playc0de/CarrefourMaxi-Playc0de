@@ -5,7 +5,7 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, menuHamburguesa}) => {
         await cerrarModalTeDamosBienvenida.navigateToMainPageAndCerrarModalTeDamosBienvenida();
     })
     await test.step('Clickear el icono Menu Hamburguesa', async () => {
-        await menuHamburguesa.clickMenuHamburguesa()
+        await menuHamburguesa.navigateToMenuHamburguesa()
     })
 })
 
