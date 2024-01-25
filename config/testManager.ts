@@ -329,6 +329,54 @@ import { HeaderSucursales } from '../pageObjectModel/MaxiOnLine/Header/HeaderSuc
 import {
     FolletosSelectProvinciaLocalidad
 } from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidad'
+import {
+    FolletosSelectProvinciaLocalidadAvellaneda
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadAvellaneda'
+import {
+    FolletosSelectProvinciaLocalidadBurzaco
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadBurzaco'
+import {
+    FolletosSelectProvinciaLocalidadEscobar
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadEscobar'
+import {
+    FolletosSelectProvinciaLocalidadEzpeleta
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadEzpeleta'
+import {
+    FolletosSelectProvinciaLocalidadItuzaingo
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadItuzaingo'
+import {
+    FolletosSelectProvinciaLocalidadJoseCPaz
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadJoseCPaz'
+import {
+    FolletosSelectProvinciaLocalidadJoseLeonSuarez
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadJoseLeonSuarez'
+import {
+    FolletosSelectProvinciaLocalidadLaferrere
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadLaferrere'
+import {
+    FolletosSelectProvinciaLocalidadLomaHermosa
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadLomaHermosa'
+import {
+    FolletosSelectProvinciaLocalidadLomasDeZamora
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadLomasDeZamora'
+import {
+    FolletosSelectProvinciaLocalidadMoreno
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadMoreno'
+import {
+    FolletosSelectProvinciaLocalidadPilar
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadPilar'
+import {
+    FolletosSelectProvinciaLocalidadSanVicente
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadSanVicente'
+import {
+    FolletosSelectProvinciaLocalidadTandil
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadTandil'
+import {
+    FolletosSelectProvinciaLocalidadTemperley
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadTemperley'
+import {
+    FolletosSelectProvinciaLocalidadTigre
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadTigre'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -467,6 +515,22 @@ const test = baseTest.extend<{
     headerFolletos: HeaderFolletos
     headerSucursales: HeaderSucursales
     folletosSelectProvinciaLocalidad: FolletosSelectProvinciaLocalidad
+    folletosSelectProvinciaLocalidadAvellaneda: FolletosSelectProvinciaLocalidadAvellaneda
+    folletosSelectProvinciaLocalidadBurzaco: FolletosSelectProvinciaLocalidadBurzaco
+    folletosSelectProvinciaLocalidadEscobar: FolletosSelectProvinciaLocalidadEscobar
+    folletosSelectProvinciaLocalidadEzpeleta: FolletosSelectProvinciaLocalidadEzpeleta
+    folletosSelectProvinciaLocalidadItuzaingo: FolletosSelectProvinciaLocalidadItuzaingo
+    folletosSelectProvinciaLocalidadJoseCPaz: FolletosSelectProvinciaLocalidadJoseCPaz
+    folletosSelectProvinciaLocalidadJoseLeonSuarez: FolletosSelectProvinciaLocalidadJoseLeonSuarez
+    folletosSelectProvinciaLocalidadLaferrere: FolletosSelectProvinciaLocalidadLaferrere
+    folletosSelectProvinciaLocalidadLomaHermosa: FolletosSelectProvinciaLocalidadLomaHermosa
+    folletosSelectProvinciaLocalidadLomasDeZamora: FolletosSelectProvinciaLocalidadLomasDeZamora
+    folletosSelectProvinciaLocalidadMoreno: FolletosSelectProvinciaLocalidadMoreno
+    folletosSelectProvinciaLocalidadPilar: FolletosSelectProvinciaLocalidadPilar
+    folletosSelectProvinciaLocalidadSanVicente: FolletosSelectProvinciaLocalidadSanVicente
+    folletosSelectProvinciaLocalidadTandil: FolletosSelectProvinciaLocalidadTandil
+    folletosSelectProvinciaLocalidadTemperley: FolletosSelectProvinciaLocalidadTemperley
+    folletosSelectProvinciaLocalidadTigre: FolletosSelectProvinciaLocalidadTigre
 
 }>({
     // LOGIN PAGE
@@ -484,6 +548,23 @@ const test = baseTest.extend<{
     },
 
 
+    folletosSelectProvinciaLocalidadSanVicente: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadSanVicente(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadTandil: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadTandil(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadTemperley: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadTemperley(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadTigre: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadTigre(page, context, environment))
+    },
+
+
+
+
+
     // HEADER
     headerElegiFormaEntrega: async ({ page, context }, use) => {
         await use(new HeaderElegiFormaEntrega(page, context, environment))
@@ -499,6 +580,44 @@ const test = baseTest.extend<{
     folletosSelectProvinciaLocalidad: async ({ page, context }, use) => {
         await use(new FolletosSelectProvinciaLocalidad(page, context, environment))
     },
+    folletosSelectProvinciaLocalidadAvellaneda: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadAvellaneda(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadBurzaco: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadBurzaco(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadEscobar: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadEscobar(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadEzpeleta: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadEzpeleta(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadItuzaingo: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadItuzaingo(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadJoseCPaz: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadJoseCPaz(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadJoseLeonSuarez: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadJoseLeonSuarez(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadLaferrere: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadLaferrere(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadLomaHermosa: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadLomaHermosa(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadLomasDeZamora: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadLomasDeZamora(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadMoreno: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadMoreno(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadPilar: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadPilar(page, context, environment))
+    },
+
+
 
 
 
