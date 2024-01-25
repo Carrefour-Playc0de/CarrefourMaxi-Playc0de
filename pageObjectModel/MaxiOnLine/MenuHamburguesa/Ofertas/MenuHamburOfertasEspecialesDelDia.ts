@@ -19,7 +19,6 @@ export class MenuHamburOfertasEspecialesDelDia extends BasePage {
         await this.click(this.ESPECIALES_DEL_DIA)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburOfertasEspecialesDelDia(): Promise<void> {

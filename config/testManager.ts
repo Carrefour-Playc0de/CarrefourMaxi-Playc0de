@@ -323,6 +323,12 @@ import { MenuHamburOfertas } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa
 import {
     MenuHamburOfertasEspecialesDelDia
 } from '../pageObjectModel/MaxiOnLine/MenuHamburguesa/Ofertas/MenuHamburOfertasEspecialesDelDia'
+import { HeaderElegiFormaEntrega } from '../pageObjectModel/MaxiOnLine/Header/HeaderElegiFormaEntrega'
+import { HeaderFolletos } from '../pageObjectModel/MaxiOnLine/Header/HeaderFolletos'
+import { HeaderSucursales } from '../pageObjectModel/MaxiOnLine/Header/HeaderSucursales'
+import {
+    FolletosSelectProvinciaLocalidad
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidad'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -457,6 +463,10 @@ const test = baseTest.extend<{
     menuHamburOfertasVerTodos: MenuHamburOfertasVerTodos
     menuHamburOfertas: MenuHamburOfertas
     menuHamburOfertasEspecialesDelDia: MenuHamburOfertasEspecialesDelDia
+    headerElegiFormaEntrega: HeaderElegiFormaEntrega
+    headerFolletos: HeaderFolletos
+    headerSucursales: HeaderSucursales
+    folletosSelectProvinciaLocalidad: FolletosSelectProvinciaLocalidad
 
 }>({
     // LOGIN PAGE
@@ -474,6 +484,21 @@ const test = baseTest.extend<{
     },
 
 
+    // HEADER
+    headerElegiFormaEntrega: async ({ page, context }, use) => {
+        await use(new HeaderElegiFormaEntrega(page, context, environment))
+    },
+    headerFolletos: async ({ page, context }, use) => {
+        await use(new HeaderFolletos(page, context, environment))
+    },
+    headerSucursales: async ({ page, context }, use) => {
+        await use(new HeaderSucursales(page, context, environment))
+    },
+
+    // FOLLETOS
+    folletosSelectProvinciaLocalidad: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidad(page, context, environment))
+    },
 
 
 
