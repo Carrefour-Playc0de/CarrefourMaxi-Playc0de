@@ -327,9 +327,6 @@ import { HeaderElegiFormaEntrega } from '../pageObjectModel/MaxiOnLine/Header/He
 import { HeaderFolletos } from '../pageObjectModel/MaxiOnLine/Header/HeaderFolletos'
 import { HeaderSucursales } from '../pageObjectModel/MaxiOnLine/Header/HeaderSucursales'
 import {
-    FolletosSelectProvinciaLocalidad
-} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidad'
-import {
     FolletosSelectProvinciaLocalidadAvellaneda
 } from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadAvellaneda'
 import {
@@ -377,6 +374,30 @@ import {
 import {
     FolletosSelectProvinciaLocalidadTigre
 } from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadTigre'
+import {
+    FolletosSelectProvinciaLocalidadTortuguitas
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadTortuguitas'
+import {
+    FolletosSelectProvinciaLocalidadCatamarca
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadCatamarca'
+import {
+    FolletosSelectProvinciaLocalidadChaco
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadChaco'
+import {
+    FolletosSelectProvinciaLocalidadCordoba
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadCordoba'
+import {
+    FolletosSelectProvinciaLocalidadMendoza
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadMendoza'
+import {
+    FolletosSelectProvinciaLocalidadEntreRios
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadEntreRios'
+import {
+    FolletosSelectProvinciaLocalidadJujuy
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidadJujuy'
+import {
+    FolletosSelectProvinciaLocalidad
+} from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidad'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -531,6 +552,13 @@ const test = baseTest.extend<{
     folletosSelectProvinciaLocalidadTandil: FolletosSelectProvinciaLocalidadTandil
     folletosSelectProvinciaLocalidadTemperley: FolletosSelectProvinciaLocalidadTemperley
     folletosSelectProvinciaLocalidadTigre: FolletosSelectProvinciaLocalidadTigre
+    folletosSelectProvinciaLocalidadTortuguitas: FolletosSelectProvinciaLocalidadTortuguitas
+    folletosSelectProvinciaLocalidadCatamarca: FolletosSelectProvinciaLocalidadCatamarca
+    folletosSelectProvinciaLocalidadChaco: FolletosSelectProvinciaLocalidadChaco
+    folletosSelectProvinciaLocalidadCordoba: FolletosSelectProvinciaLocalidadCordoba
+    folletosSelectProvinciaLocalidadMendoza: FolletosSelectProvinciaLocalidadMendoza
+    folletosSelectProvinciaLocalidadEntreRios: FolletosSelectProvinciaLocalidadEntreRios
+    folletosSelectProvinciaLocalidadJujuy: FolletosSelectProvinciaLocalidadJujuy
 
 }>({
     // LOGIN PAGE
@@ -548,18 +576,6 @@ const test = baseTest.extend<{
     },
 
 
-    folletosSelectProvinciaLocalidadSanVicente: async ({ page, context }, use) => {
-        await use(new FolletosSelectProvinciaLocalidadSanVicente(page, context, environment))
-    },
-    folletosSelectProvinciaLocalidadTandil: async ({ page, context }, use) => {
-        await use(new FolletosSelectProvinciaLocalidadTandil(page, context, environment))
-    },
-    folletosSelectProvinciaLocalidadTemperley: async ({ page, context }, use) => {
-        await use(new FolletosSelectProvinciaLocalidadTemperley(page, context, environment))
-    },
-    folletosSelectProvinciaLocalidadTigre: async ({ page, context }, use) => {
-        await use(new FolletosSelectProvinciaLocalidadTigre(page, context, environment))
-    },
 
 
 
@@ -616,12 +632,39 @@ const test = baseTest.extend<{
     folletosSelectProvinciaLocalidadPilar: async ({ page, context }, use) => {
         await use(new FolletosSelectProvinciaLocalidadPilar(page, context, environment))
     },
-
-
-
-
-
-
+    folletosSelectProvinciaLocalidadSanVicente: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadSanVicente(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadTandil: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadTandil(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadTemperley: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadTemperley(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadTigre: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadTigre(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadTortuguitas: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadTortuguitas(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadCatamarca: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadCatamarca(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadChaco: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadChaco(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadCordoba: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadCordoba(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadMendoza: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadMendoza(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadEntreRios: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadEntreRios(page, context, environment))
+    },
+    folletosSelectProvinciaLocalidadJujuy: async ({ page, context }, use) => {
+        await use(new FolletosSelectProvinciaLocalidadJujuy(page, context, environment))
+    },
 
 
     // MENU HAMBURGUESA
