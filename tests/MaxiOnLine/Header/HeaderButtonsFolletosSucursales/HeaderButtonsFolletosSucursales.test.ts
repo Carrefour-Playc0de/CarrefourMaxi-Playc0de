@@ -7,9 +7,6 @@ test.beforeEach(async ({ cerrarModalTeDamosBienvenida, headerFolletos, folletosS
     await test.step('Click en Folletos', async () => {
         await headerFolletos.navigateToHeaderFolletos()
     })
-    await test.step('Click en el select Provincia o Localidad', async () => {
-        await folletosSelectProvinciaLocalidad.navigateToFolletosSelectProvinciaLocalidad()
-    })
 })
 
 test('@Regression @Header (TS-31) Verificar que al clickear en la opcion Avellaneda del select Provincia funciona correctamente', async ({folletosSelectProvinciaLocalidadAvellaneda}) => {

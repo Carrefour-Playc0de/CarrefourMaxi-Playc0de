@@ -398,6 +398,9 @@ import {
 import {
     FolletosSelectProvinciaLocalidad
 } from '../pageObjectModel/MaxiOnLine/Header/Folletos/FolletosSelectProvinciaLocalidad'
+import {
+    HeaderHBFSFolletosButton
+} from '../pageObjectModel/MaxiOnLine/Header/HeaderButtonsFolletosSucursales/HeaderHBFSFolletosButton'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -559,6 +562,7 @@ const test = baseTest.extend<{
     folletosSelectProvinciaLocalidadMendoza: FolletosSelectProvinciaLocalidadMendoza
     folletosSelectProvinciaLocalidadEntreRios: FolletosSelectProvinciaLocalidadEntreRios
     folletosSelectProvinciaLocalidadJujuy: FolletosSelectProvinciaLocalidadJujuy
+    headerHBFSFolletosButton: HeaderHBFSFolletosButton
 
 }>({
     // LOGIN PAGE
@@ -591,6 +595,13 @@ const test = baseTest.extend<{
     headerSucursales: async ({ page, context }, use) => {
         await use(new HeaderSucursales(page, context, environment))
     },
+
+    // HEADER - HEADER BUTTONS FOLLETOS & SUCURSALES
+    headerHBFSFolletosButton: async ({ page, context }, use) => {
+        await use(new HeaderHBFSFolletosButton(page, context, environment))
+    },
+
+
 
     // FOLLETOS
     folletosSelectProvinciaLocalidad: async ({ page, context }, use) => {
