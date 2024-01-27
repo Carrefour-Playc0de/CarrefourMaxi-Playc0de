@@ -19,7 +19,6 @@ export class FolletosSelectProvinciaLocalidadLaferrere extends BasePage {
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
         await this.click(this.SELECT_PROV_LOCALIDAD)
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToFolletosSelectProvinciaLocalidadLaferrere(): Promise<void> {

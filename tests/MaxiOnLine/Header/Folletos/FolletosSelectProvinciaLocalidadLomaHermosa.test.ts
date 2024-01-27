@@ -12,7 +12,7 @@ test.beforeEach(async ({ cerrarModalTeDamosBienvenida, headerFolletos, folletosS
     })
 })
 
-test('@Test @Regression @Header (TS-31) Verificar que al clickear en la opcion Loma Hermosa del select Provincia funciona correctamente', async ({folletosSelectProvinciaLocalidadLomaHermosa}) => {
+test('@Regression @Header (TS-31) Verificar que al clickear en la opcion Loma Hermosa del select Provincia funciona correctamente', async ({folletosSelectProvinciaLocalidadLomaHermosa}) => {
 
     await test.step('Click en la opcion Loma Hermosa', async () => {
         await folletosSelectProvinciaLocalidadLomaHermosa.navigateToFolletosSelectProvinciaLocalidadLomaHermosa()
