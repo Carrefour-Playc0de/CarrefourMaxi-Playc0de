@@ -413,6 +413,10 @@ import {
 import {
     HeaderHBFSCompraOnlineButton
 } from '../pageObjectModel/MaxiOnLine/Header/HeaderButtonsFolletosSucursales/HeaderHBFSCompraOnlineButton'
+import { CarritoMenuHamburAlmacenVerTodo } from '../pageObjectModel/MaxiOnLine/Carrito/CarritoMenuHamburAlmacenVerTodo'
+import {
+    CerrarModalYaPuedesContinuarPedido
+} from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/CerrarModalYaPuedesContinuarPedido'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -579,6 +583,8 @@ const test = baseTest.extend<{
     headerHBFSQuieroFolletoButton: HeaderHBFSQuieroFolletoButton
     headerHBFSQuieroTerminalCobroButton: HeaderHBFSQuieroTerminalCobroButton
     headerHBFSCompraOnlineButton: HeaderHBFSCompraOnlineButton
+    carritoMenuHamburAlmacenVerTodo: CarritoMenuHamburAlmacenVerTodo
+    cerrarModalYaPuedesContinuarPedido: CerrarModalYaPuedesContinuarPedido
 
 }>({
     // LOGIN PAGE
@@ -593,6 +599,12 @@ const test = baseTest.extend<{
     },
     ingresarCuenta: async ({ page, context }, use) => {
         await use(new IngresarCuenta(page, context, environment))
+    },
+
+
+    // CARRITO
+    carritoMenuHamburAlmacenVerTodo: async ({ page, context }, use) => {
+        await use(new CarritoMenuHamburAlmacenVerTodo(page, context, environment))
     },
 
 
@@ -628,10 +640,6 @@ const test = baseTest.extend<{
     headerHBFSCompraOnlineButton: async ({ page, context }, use) => {
         await use(new HeaderHBFSCompraOnlineButton(page, context, environment))
     },
-
-
-
-
 
     // FOLLETOS
     folletosSelectProvinciaLocalidad: async ({ page, context }, use) => {
@@ -1121,6 +1129,11 @@ const test = baseTest.extend<{
     modalIngresaTusDatos: async ({ page, context }, use) => {
         await use(new ModalIngresaTusDatos(page, context, environment))
     },
+    cerrarModalYaPuedesContinuarPedido: async ({ page, context }, use) => {
+        await use(new CerrarModalYaPuedesContinuarPedido(page, context, environment))
+    },
+
+
 
 
 

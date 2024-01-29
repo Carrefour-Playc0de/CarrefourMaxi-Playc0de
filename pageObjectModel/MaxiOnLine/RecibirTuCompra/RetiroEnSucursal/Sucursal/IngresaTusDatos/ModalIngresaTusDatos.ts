@@ -31,6 +31,9 @@ export class ModalIngresaTusDatos extends BasePage {
 
     async clickBotonIngresar(): Promise<void> {
         await this.click(this.BOTON_INGRESAR)
+        await this.page.waitForLoadState("domcontentloaded")
+        await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToModalIngresaTusDatos(): Promise<void> {

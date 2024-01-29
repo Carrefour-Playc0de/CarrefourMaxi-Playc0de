@@ -4,7 +4,7 @@ import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../../config
 
 export class SelectProvinciaJujuy extends BasePage {
 
-    readonly PROVINCIA_JUJUY: Locator
+    readonly SELECT_PROVINCIA: Locator
 
     private env: any
 
@@ -12,10 +12,10 @@ export class SelectProvinciaJujuy extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.PROVINCIA_JUJUY = this.page.locator("//option[@value='JUJUY']")
+        this.SELECT_PROVINCIA = this.page.locator("//select [@id='region']")
     }
     async clickSelectProvinciaJujuy(): Promise<void> {
-        await this.click(this.PROVINCIA_JUJUY)
+        await this.selectOption(this.SELECT_PROVINCIA, 'JUJUY')
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
     }
