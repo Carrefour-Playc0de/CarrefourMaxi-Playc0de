@@ -9,9 +9,45 @@ test.beforeEach(async ({ cerrarModalTeDamosBienvenida, headerFolletos, folletosS
     })
 })
 
-test('@Regression @Header (TS-31) Verificar que al clickear en la opcion Avellaneda del select Provincia funciona correctamente', async ({folletosSelectProvinciaLocalidadAvellaneda}) => {
+test('@Regression @Header (TS-31) Verificar que al clickear el boton Folletos del header en Folletos o Sucursal funciona correctamente', async ({headerHBFSFolletosButton}) => {
 
-    await test.step('Click en la opcion Avellaneda', async () => {
-        await folletosSelectProvinciaLocalidadAvellaneda.navigateToFolletosSelectProvinciaLocalidadAvellaneda()
+    await test.step('Click en el boton Folletos del header', async () => {
+        await headerHBFSFolletosButton.navigateToHeaderHBFSFolletosButton()
     })
 })
+test('@Regression @Header (TS-31) Verificar que al clickear el boton Sucursales del header en Folletos o Sucursal funciona correctamente', async ({headerHBFSSucursalesButton}) => {
+
+    await test.step('Click en el boton Sucursales del header', async () => {
+        await headerHBFSSucursalesButton.navigateToHeaderHBFSSucursalesButton()
+    })
+})
+test('@Regression @Header (TS-31) Verificar que al clickear el boton Quiero Folleto del header en Folletos o Sucursal funciona correctamente', async ({headerHBFSQuieroFolletoButton}) => {
+
+    await test.step('Click en el boton Quiero Folleto del header', async () => {
+        await headerHBFSQuieroFolletoButton.navigateToHeaderHBFSQuieroFolletoButton()
+    })
+})
+test('@Regression @Header (TS-31) Verificar que al clickear el boton Quiero Terminal de Cobro del header en Folletos o Sucursal funciona correctamente', async ({headerHBFSQuieroTerminalCobroButton}) => {
+
+    await test.step('Click en el boton Quiero Terminal de Cobro del header', async () => {
+        await headerHBFSQuieroTerminalCobroButton.navigateToHeaderHBFSQuieroTerminalCobroButton()
+    })
+})
+test('@Regression @Header (TS-31) Verificar que al clickear el boton Compra Online del header en Folletos o Sucursal funciona correctamente', async ({headerHBFSCompraOnlineButton}) => {
+
+    await test.step('Click en el boton Compra Online del header', async () => {
+        await headerHBFSCompraOnlineButton.navigateToHeaderHBFSCompraOnlineButton()
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+

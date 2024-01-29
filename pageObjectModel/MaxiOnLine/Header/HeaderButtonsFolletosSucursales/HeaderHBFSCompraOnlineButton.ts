@@ -2,7 +2,7 @@ import { Page, BrowserContext, Locator, expect } from '@playwright/test'
 import { BasePage } from '../../../commonActions'
 import { loadEnvironmentConfig, loadTestDataConfig } from '../../../../config/configLoader'
 
-export class HeaderHBFSFolletosButton extends BasePage {
+export class HeaderHBFSCompraOnlineButton extends BasePage {
 
     readonly BUTTON: Locator
 
@@ -11,17 +11,17 @@ export class HeaderHBFSFolletosButton extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.BUTTON = this.page.locator("(//a[@class='nav-link'][normalize-space()='Folletos'])[1]")
+        this.BUTTON = this.page.locator("(//a[@class='nav-link'][normalize-space()='Comprá Online'])[1]")
     }
 
-    async clickFolletosButton(): Promise<void> {
+    async clickCompraOnlineButton(): Promise<void> {
         await this.click(this.BUTTON)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
         await this.page.waitForTimeout(3000)
     }
 
-    async navigateToHeaderHBFSFolletosButton(): Promise<void> {
-        await this.clickFolletosButton()
+    async navigateToHeaderHBFSCompraOnlineButton(): Promise<void> {
+        await this.clickCompraOnlineButton()
     }
 }

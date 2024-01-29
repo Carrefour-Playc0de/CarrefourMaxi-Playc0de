@@ -401,6 +401,18 @@ import {
 import {
     HeaderHBFSFolletosButton
 } from '../pageObjectModel/MaxiOnLine/Header/HeaderButtonsFolletosSucursales/HeaderHBFSFolletosButton'
+import {
+    HeaderHBFSSucursalesButton
+} from '../pageObjectModel/MaxiOnLine/Header/HeaderButtonsFolletosSucursales/HeaderHBFSSucursalesButton'
+import {
+    HeaderHBFSQuieroFolletoButton
+} from '../pageObjectModel/MaxiOnLine/Header/HeaderButtonsFolletosSucursales/HeaderHBFSQuieroFolletoButton'
+import {
+    HeaderHBFSQuieroTerminalCobroButton
+} from '../pageObjectModel/MaxiOnLine/Header/HeaderButtonsFolletosSucursales/HeaderHBFSQuieroTerminalCobroButton'
+import {
+    HeaderHBFSCompraOnlineButton
+} from '../pageObjectModel/MaxiOnLine/Header/HeaderButtonsFolletosSucursales/HeaderHBFSCompraOnlineButton'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -563,6 +575,10 @@ const test = baseTest.extend<{
     folletosSelectProvinciaLocalidadEntreRios: FolletosSelectProvinciaLocalidadEntreRios
     folletosSelectProvinciaLocalidadJujuy: FolletosSelectProvinciaLocalidadJujuy
     headerHBFSFolletosButton: HeaderHBFSFolletosButton
+    headerHBFSSucursalesButton: HeaderHBFSSucursalesButton
+    headerHBFSQuieroFolletoButton: HeaderHBFSQuieroFolletoButton
+    headerHBFSQuieroTerminalCobroButton: HeaderHBFSQuieroTerminalCobroButton
+    headerHBFSCompraOnlineButton: HeaderHBFSCompraOnlineButton
 
 }>({
     // LOGIN PAGE
@@ -600,6 +616,20 @@ const test = baseTest.extend<{
     headerHBFSFolletosButton: async ({ page, context }, use) => {
         await use(new HeaderHBFSFolletosButton(page, context, environment))
     },
+    headerHBFSSucursalesButton: async ({ page, context }, use) => {
+        await use(new HeaderHBFSSucursalesButton(page, context, environment))
+    },
+    headerHBFSQuieroFolletoButton: async ({ page, context }, use) => {
+        await use(new HeaderHBFSQuieroFolletoButton(page, context, environment))
+    },
+    headerHBFSQuieroTerminalCobroButton: async ({ page, context }, use) => {
+        await use(new HeaderHBFSQuieroTerminalCobroButton(page, context, environment))
+    },
+    headerHBFSCompraOnlineButton: async ({ page, context }, use) => {
+        await use(new HeaderHBFSCompraOnlineButton(page, context, environment))
+    },
+
+
 
 
 
