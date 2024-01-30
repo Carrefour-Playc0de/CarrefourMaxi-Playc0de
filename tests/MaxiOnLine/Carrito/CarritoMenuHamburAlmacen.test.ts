@@ -26,9 +26,9 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetir
     await test.step('Click en boton INGRESAR', async () => {
         await modalIngresaTusDatos.navigateToModalIngresaTusDatos()
     })
-    await test.step('Click en la X del modal Ya Podes Continuar con el Pedidio', async () => {
-        await cerrarModalYaPuedesContinuarPedido.navigateToCerrarModalYaPuedesContinuarPedido()
-    })
+    // await test.step('Click en la X del modal Ya Podes Continuar con el Pedidio', async () => {
+    //     await cerrarModalYaPuedesContinuarPedido.navigateToCerrarModalYaPuedesContinuarPedido()
+    // })
     await test.step('Click en el icono Menu Hamburguesa', async () => {
         await menuHamburguesa.navigateToMenuHamburguesa()
     })
