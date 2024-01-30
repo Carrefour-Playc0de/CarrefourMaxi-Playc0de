@@ -15,9 +15,12 @@ export class CerrarModalYaPuedesContinuarPedido extends BasePage {
         this.CRUZ = this.page.locator("(//img[@class='img_close_c'])[1]")
     }
     async clickCruz(): Promise<void> {
+        await this.page.waitForLoadState("domcontentloaded")
+        await this.page.waitForFunction(() => document.readyState === 'complete')
         await this.click(this.CRUZ)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
+        await this.page.waitForTimeout(3000)
     }
 
     async navigateToCerrarModalYaPuedesContinuarPedido(): Promise<void> {

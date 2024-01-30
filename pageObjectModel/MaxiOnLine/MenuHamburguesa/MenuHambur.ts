@@ -18,7 +18,6 @@ export class MenuHamburguesa extends BasePage {
         await this.click(this.MENU_HAMBURGUESA)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        // await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburguesa(): Promise<void> {

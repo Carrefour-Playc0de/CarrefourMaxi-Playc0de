@@ -12,14 +12,13 @@ export class MenuHamburAlmacenVerTodo extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.ALMACEN_VER_TODO = this.page.locator("//div[@onclick=\"gotoPage('sec', 'almacén')\"][normalize-space()='VER TODO']")
+        this.ALMACEN_VER_TODO = this.page.locator("(//div[@onclick=\"gotoPage('sec', 'almacén')\"][normalize-space()='VER TODO'])[1]")
     }
 
     async clickAlmacenVerTodo(): Promise<void> {
         await this.click(this.ALMACEN_VER_TODO)
         await this.page.waitForLoadState("domcontentloaded")
         await this.page.waitForFunction(() => document.readyState === 'complete')
-        await this.page.waitForTimeout(3000)
     }
 
     async navigateToMenuHamburAlmacenVerTodo(): Promise<void> {
