@@ -1,7 +1,7 @@
 import test from '../../../config/testManager'
 
 
-test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetiroEnSucursal, botonConfirmarRecibirTuCompra, selectProvinciaBsAsNorte, selectSucursalArmaPedidoCAMPANAColectoraNorte1647, botonConfirmar, modalIngresaTusDatos, cerrarModalYaPuedesContinuarPedido,menuHamburguesa, menuHamburAlmacen, menuHamburAlmacenVerTodo}) => {
+test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetiroEnSucursal, botonConfirmarRecibirTuCompra, selectProvinciaBsAsNorte, selectSucursalArmaPedidoCAMPANAColectoraNorte1647, botonConfirmar, modalIngresaTusDatos,menuHamburguesa, menuHamburBebidas, menuHamburBebidasBebidasBlancas}) => {
     await test.step('Click en la X del modal Te Damos la Bienvenida', async () => {
         await cerrarModalTeDamosBienvenida.navigateToMainPageAndCerrarModalTeDamosBienvenida();
     })
@@ -26,24 +26,21 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetir
     await test.step('Click en boton INGRESAR', async () => {
         await modalIngresaTusDatos.navigateToModalIngresaTusDatos()
     })
-    // await test.step('Click en la X del modal Ya Podes Continuar con el Pedidio', async () => {
-    //     await cerrarModalYaPuedesContinuarPedido.navigateToCerrarModalYaPuedesContinuarPedido()
-    // })
     await test.step('Click en el icono Menu Hamburguesa', async () => {
         await menuHamburguesa.navigateToMenuHamburguesa()
     })
-    await test.step('Click en Almacen', async () => {
-        await menuHamburAlmacen.navigateToMenuHamburAlmacen()
+    await test.step('Click en Bebidas', async () => {
+        await menuHamburBebidas.navigateToMenuHamburBebidas()
     })
-    await test.step('Click en Almacen VER TODO', async () => {
-        await menuHamburAlmacenVerTodo.navigateToMenuHamburAlmacenVerTodo()
+    await test.step('Click en Bebidas Blancas', async () => {
+        await menuHamburBebidasBebidasBlancas.navigateToMenuHamburBebidasBebidasBlancas()
     })
 })
 
-test('@Test @Regression @Carrito (TS-31) Verificar que al clickear los Carritos de varios productos del Almacen funciona correctamente', async ({carritoMenuHamburAlmacenVerTodo}) => {
+test('@Test @Regression @Carrito (TS-31) Verificar que al clickear los Carritos de varios productos del Almacen funciona correctamente', async ({carritoMenuHamburBebidasBebidasBlancas}) => {
 
     await test.step('Click en los Carritos', async () => {
-        await carritoMenuHamburAlmacenVerTodo.navigateToCarritoMenuHamburAlmacenVerTodo()
+        await carritoMenuHamburBebidasBebidasBlancas.navigateToCarritoMenuHamburBebidasBebidasBlancas()
     })
 })
 // await this.page.waitForTimeout(3000)

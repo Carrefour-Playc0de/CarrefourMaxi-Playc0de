@@ -413,7 +413,7 @@ import {
 import {
     HeaderHBFSCompraOnlineButton
 } from '../pageObjectModel/MaxiOnLine/Header/HeaderButtonsFolletosSucursales/HeaderHBFSCompraOnlineButton'
-import { CarritoMenuHamburAlmacenVerTodo } from '../pageObjectModel/MaxiOnLine/Carrito/CarritoMenuHamburAlmacenVerTodo'
+import { CarritoMenuHamburBebidasBebidasBlancas } from '../pageObjectModel/MaxiOnLine/Carrito/CarritoMenuHamburBebidasBebidasBlancas'
 import {
     CerrarModalYaPuedesContinuarPedido
 } from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/CerrarModalYaPuedesContinuarPedido'
@@ -583,7 +583,7 @@ const test = baseTest.extend<{
     headerHBFSQuieroFolletoButton: HeaderHBFSQuieroFolletoButton
     headerHBFSQuieroTerminalCobroButton: HeaderHBFSQuieroTerminalCobroButton
     headerHBFSCompraOnlineButton: HeaderHBFSCompraOnlineButton
-    carritoMenuHamburAlmacenVerTodo: CarritoMenuHamburAlmacenVerTodo
+    carritoMenuHamburBebidasBebidasBlancas: CarritoMenuHamburBebidasBebidasBlancas
     cerrarModalYaPuedesContinuarPedido: CerrarModalYaPuedesContinuarPedido
 
 }>({
@@ -603,8 +603,8 @@ const test = baseTest.extend<{
 
 
     // CARRITO
-    carritoMenuHamburAlmacenVerTodo: async ({ page, context }, use) => {
-        await use(new CarritoMenuHamburAlmacenVerTodo(page, context, environment))
+    carritoMenuHamburBebidasBebidasBlancas: async ({ page, context }, use) => {
+        await use(new CarritoMenuHamburBebidasBebidasBlancas(page, context, environment))
     },
 
 
