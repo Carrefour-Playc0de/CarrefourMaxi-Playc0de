@@ -417,6 +417,7 @@ import { CarritoMenuHamburBebidasBebidasBlancas } from '../pageObjectModel/MaxiO
 import {
     CerrarModalYaPuedesContinuarPedido
 } from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/CerrarModalYaPuedesContinuarPedido'
+import { BotonEnvio } from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/Envio/BotonEnvio'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -585,6 +586,7 @@ const test = baseTest.extend<{
     headerHBFSCompraOnlineButton: HeaderHBFSCompraOnlineButton
     carritoMenuHamburBebidasBebidasBlancas: CarritoMenuHamburBebidasBebidasBlancas
     cerrarModalYaPuedesContinuarPedido: CerrarModalYaPuedesContinuarPedido
+    botonEnvio: BotonEnvio
 
 }>({
     // LOGIN PAGE
@@ -1042,6 +1044,11 @@ const test = baseTest.extend<{
 
 
     //COMO QUERES RETIRAR TU COMPRA
+    botonEnvio: async ({ page, context }, use) => {
+        await use(new BotonEnvio(page, context, environment))
+    },
+
+
     botonRetiroEnSucursal: async ({ page, context }, use) => {
         await use(new BotonRetiroEnSucursal(page, context, environment))
     },
