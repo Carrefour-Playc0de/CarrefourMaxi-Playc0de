@@ -12,7 +12,20 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetir
     })
 })
 
-test('@Smoke @Regression @Login (TS-03) Verificar que al clickear el boton CONFIRMAR en el modal Como queres recibir tu compra funciona correctamente', async ({botonConfirmarRecibirTuCompra}) => {
+test('@Test @Smoke @Regression @Login (TS-03) Verificar que al clickear el boton Retiro en Sucursal y luego el boton CONFIRMAR funciona correctamente', async ({botonRetiroEnSucursal}) => {
+
+    await test.step('Click en el boton Retiro en Sucursal', async () => {
+        await botonRetiroEnSucursal.navigateToBotonRetiroEnSucursal()
+    })
+})
+test('@Test @Smoke @Regression @Login (TS-03) Verificar que al clickear el boton Envio funciona correctamente', async ({botonEnvio}) => {
+
+    await test.step('Click en el boton Envio', async () => {
+        await botonEnvio.navigateToBotonEnvio()
+    })
+})
+
+test.afterEach(async ({ botonConfirmarRecibirTuCompra }) => {
 
     await test.step('Click en el boton CONFIRMAR en el modal Como queres recibir tu compra', async () => {
         await botonConfirmarRecibirTuCompra.navigateToBotonConfirmarRecibirTuCompra()

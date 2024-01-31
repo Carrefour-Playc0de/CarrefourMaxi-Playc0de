@@ -12,7 +12,8 @@ export class BotonConfirmarRecibirTuCompra extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.BOTON_CONFIRMAR = this.page.locator("//button[@id='btn_step1']")
+        // this.BOTON_CONFIRMAR = this.page.locator("//button[@id='btn_step1']")
+        this.BOTON_CONFIRMAR = this.page.locator("(//button[@id='btn_step1'])[1]")
     }
     async clickBotonConfirmarRecibirTuCompra(): Promise<void> {
         await this.click(this.BOTON_CONFIRMAR)

@@ -9,9 +9,9 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta}) => {
     })
 })
 
-test('@Test @Smoke @Regression @Login (TS-03) Verificar que al clickear el boton Retiro en Sucursal funciona correctamente', async ({botonRetiroEnSucursal}) => {
+test('@Test @Smoke @Regression @Login (TS-03) Verificar que al clickear el boton Envio funciona correctamente', async ({botonEnvio}) => {
 
-    await test.step('Click en el boton Retiro en Sucursal', async () => {
-        await botonRetiroEnSucursal.navigateToBotonRetiroEnSucursal()
+    await test.step('Click en el boton Envio', async () => {
+        await botonEnvio.navigateToBotonEnvio()
     })
 })
