@@ -37,7 +37,7 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetir
     })
 })
 
-test('@Test @Regression @Carrito (TS-31) Verificar que al clickear los Carritos de varios productos del Almacen funciona correctamente', async ({carritoMenuHamburBebidasBebidasBlancas}) => {
+test('@Regression @Carrito (TS-31) Verificar que al clickear los Carritos de varios productos del Almacen funciona correctamente', async ({carritoMenuHamburBebidasBebidasBlancas}) => {
 
     await test.step('Click en los Carritos', async () => {
         await carritoMenuHamburBebidasBebidasBlancas.navigateToCarritoMenuHamburBebidasBebidasBlancas()

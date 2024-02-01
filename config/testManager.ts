@@ -418,6 +418,12 @@ import {
     CerrarModalYaPuedesContinuarPedido
 } from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/CerrarModalYaPuedesContinuarPedido'
 import { BotonEnvio } from '../pageObjectModel/MaxiOnLine/RecibirTuCompra/Envio/BotonEnvio'
+import { MaxiHeaderFolletosButton } from '../pageObjectModel/Maxi/Header/MaxiHeaderFolletosButton'
+import { MaxiHeaderSucursalesButton } from '../pageObjectModel/Maxi/Header/MaxiHeaderSucursalesButton'
+import { MaxiHeaderQuieroFolletoButton } from '../pageObjectModel/Maxi/Header/MaxiHeaderQuieroFolletoButton'
+import { MaxiHeaderQuieroTerminalCobroButton } from '../pageObjectModel/Maxi/Header/MaxiHeaderQuieroTerminalCobroButton'
+import { MaxiHeaderCompraOnlineButton } from '../pageObjectModel/Maxi/Header/MaxiHeaderCompraOnlineButton'
+import { NavigateMaxiCarrefour } from '../pageObjectModel/Maxi/NavigateMaxiCarrefour'
 // import { ProfilePage } from '../pageObjectModel/ProfilePage'
 
 const environment = process.env.TEST || 'qa'
@@ -587,6 +593,13 @@ const test = baseTest.extend<{
     carritoMenuHamburBebidasBebidasBlancas: CarritoMenuHamburBebidasBebidasBlancas
     cerrarModalYaPuedesContinuarPedido: CerrarModalYaPuedesContinuarPedido
     botonEnvio: BotonEnvio
+    maxiHeaderFolletosButton: MaxiHeaderFolletosButton
+    maxiHeaderSucursalesButton: MaxiHeaderSucursalesButton
+    maxiHeaderQuieroFolletoButton: MaxiHeaderQuieroFolletoButton
+    maxiHeaderQuieroTerminalCobroButton: MaxiHeaderQuieroTerminalCobroButton
+    maxiHeaderCompraOnlineButton: MaxiHeaderCompraOnlineButton
+    navigateMaxiCarrefour: NavigateMaxiCarrefour
+
 
 }>({
     // LOGIN PAGE
@@ -603,11 +616,31 @@ const test = baseTest.extend<{
         await use(new IngresarCuenta(page, context, environment))
     },
 
-
     // CARRITO
     carritoMenuHamburBebidasBebidasBlancas: async ({ page, context }, use) => {
         await use(new CarritoMenuHamburBebidasBebidasBlancas(page, context, environment))
     },
+
+    // MAXI - HEADER
+    navigateMaxiCarrefour: async ({ page, context }, use) => {
+        await use(new NavigateMaxiCarrefour(page, context, environment))
+    },
+    maxiHeaderFolletosButton: async ({ page, context }, use) => {
+        await use(new MaxiHeaderFolletosButton(page, context, environment))
+    },
+    maxiHeaderSucursalesButton: async ({ page, context }, use) => {
+        await use(new MaxiHeaderSucursalesButton(page, context, environment))
+    },
+    maxiHeaderQuieroFolletoButton: async ({ page, context }, use) => {
+        await use(new MaxiHeaderQuieroFolletoButton(page, context, environment))
+    },
+    maxiHeaderQuieroTerminalCobroButton: async ({ page, context }, use) => {
+        await use(new MaxiHeaderQuieroTerminalCobroButton(page, context, environment))
+    },
+    maxiHeaderCompraOnlineButton: async ({ page, context }, use) => {
+        await use(new MaxiHeaderCompraOnlineButton(page, context, environment))
+    },
+
 
 
 
