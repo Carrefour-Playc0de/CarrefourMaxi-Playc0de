@@ -6,7 +6,7 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida}) => {
     })
 })
 
-test('@Smoke @Regression @Login (TS-02) Verificar que al clickear el icono Ingresar se direcciona correctamente', async ({ingresarCuenta}) => {
+test('@Smoke @Regression @Login (B2B-TC-106) Verificar que al clickear el icono Ingresar se direcciona correctamente', async ({ingresarCuenta}) => {
 
     await test.step('Click en el icono Ingresar', async () => {
         await ingresarCuenta.navigateToIngresarCuenta()

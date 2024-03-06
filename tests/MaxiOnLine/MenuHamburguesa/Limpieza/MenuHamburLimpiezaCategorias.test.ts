@@ -12,7 +12,7 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, menuHamburguesa, menuHambu
     })
 })
 
-test('@Regression @MenuHamburguesa (B2C-TC-1111) Verificar que funciona el Menu Limpieza: VER TODO', async ({menuHamburLimpiezaVerTodo}) => {
+test('@Smoke @Regression @MenuHamburguesa (B2C-TC-1111) Verificar que funciona el Menu Limpieza: VER TODO', async ({menuHamburLimpiezaVerTodo}) => {
 
     await test.step('Click en Congelados VER TODO', async () => {
         await menuHamburLimpiezaVerTodo.navigateToMenuHamburLimpiezaVerTodo()

@@ -18,7 +18,7 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetir
     })
 })
 
-test('@Retiro @Regression (TS-29) Verificar que al clickear el select Sucursal que Arma Tu Pedido en CAMPANA Colectora Norte 1647 funciona correctamente', async ({selectSucursalArmaPedidoCAMPANAColectoraNorte1647}) => {
+test('@Smoke @Retiro @Regression (TS-29) Verificar que al clickear el select Sucursal que Arma Tu Pedido en CAMPANA Colectora Norte 1647 funciona correctamente', async ({selectSucursalArmaPedidoCAMPANAColectoraNorte1647}) => {
 
     await test.step('Click en CAMPANA Colectora Norte 1647', async () => {
         await selectSucursalArmaPedidoCAMPANAColectoraNorte1647.navigateToSelectSucursalArmaPedidoCAMPANAColectoraNorte1647()

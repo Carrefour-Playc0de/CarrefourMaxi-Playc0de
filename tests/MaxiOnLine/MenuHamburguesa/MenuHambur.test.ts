@@ -6,7 +6,7 @@ test.beforeEach(async ({ cerrarModalTeDamosBienvenida }) => {
     })
 })
 
-test('@Regression @MenuHamburguesa (TS-31) Verificar al clickear el Menu Hamburguesa funciona correctamente', async ({menuHamburguesa}) => {
+test('@Smoke @Regression (B2B-TC-14) Verificar al clickear en el Menu Hamburguesa funciona correctamente', async ({menuHamburguesa}) => {
 
     await test.step('Clickear el icono Menu Hamburguesa', async () => {
         await menuHamburguesa.navigateToMenuHamburguesa()
