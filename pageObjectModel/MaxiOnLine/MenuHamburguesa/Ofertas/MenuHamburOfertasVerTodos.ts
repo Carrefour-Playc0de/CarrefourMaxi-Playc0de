@@ -12,7 +12,7 @@ export class MenuHamburOfertasVerTodos extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.OFERTAS_VER_TODOS = this.page.locator("(//div[@onclick=\"gotoPage('sale', '')\"][normalize-space()='VER TODO'])[1]")
+        this.OFERTAS_VER_TODOS = this.page.locator("(//div[@onclick=\"gotoPage('sale', '', 'Ofertas')\"][normalize-space()='VER TODO'])[1]")
     }
 
     async clickOfertasVerTodos(): Promise<void> {

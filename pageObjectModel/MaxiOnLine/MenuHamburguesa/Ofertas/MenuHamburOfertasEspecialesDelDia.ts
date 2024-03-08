@@ -12,7 +12,7 @@ export class MenuHamburOfertasEspecialesDelDia extends BasePage {
         super(page, context)
         this.env = loadEnvironmentConfig(environment)
 
-        this.ESPECIALES_DEL_DIA = this.page.locator("(//div[normalize-space()='ESPECIALES DEL DIA'])[1]")
+        this.ESPECIALES_DEL_DIA = this.page.locator("(//div[normalize-space()='ESPECIAL DEL DIA'])[1]")
     }
 
     async clickOfertasEspecialesDelDia(): Promise<void> {
