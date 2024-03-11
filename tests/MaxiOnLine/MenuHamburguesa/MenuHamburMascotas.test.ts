@@ -9,7 +9,7 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, menuHamburguesa}) => {
     })
 })
 
-test('@Smoke @Regression () Verificar que al clickear en Menu Mascotas funciona correctamente', async ({menuHamburMascotas}) => {
+test('@Smoke @Regression (B2B-TC-170) Verificar que al clickear en Menu Mascotas funciona correctamente', async ({menuHamburMascotas}) => {
 
     await test.step('Click en Mascotas', async () => {
         await menuHamburMascotas.navigateToMenuHamburMascotas()

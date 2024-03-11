@@ -12,25 +12,25 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, menuHamburguesa, menuHambu
     })
 })
 
-test('@Smoke @Regression () Verificar que funciona el Menu Mascotas: VER TODO', async ({menuHamburMascotasVerTodos}) => {
+test('@Smoke @Regression (B2B-TC-171) Verificar que funciona correctamente al clickear en el Menu Mascotas: VER TODO', async ({menuHamburMascotasVerTodos}) => {
 
     await test.step('Click en Mascotas VER TODO', async () => {
         await menuHamburMascotasVerTodos.navigateToMenuHamburMascotasVerTodos()
     })
 })
-test('@Regression @MenuHamburguesa () Verificar que funciona correctamente al clickear en el Menu Mascotas: Alimentos para Gatos', async ({menuHamburMascotasAlimentosGatos}) => {
+test('@Regression @MenuHamburguesa (B2B-TC-172) Verificar que funciona correctamente al clickear en el Menu Mascotas: Alimentos para Gatos', async ({menuHamburMascotasAlimentosGatos}) => {
 
     await test.step('Click en Alimentos para Gatos', async () => {
         await menuHamburMascotasAlimentosGatos.navigateToMenuHamburMascotasAlimentosGatos()
     })
 })
-test('@Regression @MenuHamburguesa () Verificar que funciona correctamente al clickear en el Menu Mascotas: Alimentos y Snacks para Perros', async ({menuHamburMascotasAlimentosSnacksPerros}) => {
+test('@Regression @MenuHamburguesa (B2B-TC-173) Verificar que funciona correctamente al clickear en el Menu Mascotas: Alimentos y Snacks para Perros', async ({menuHamburMascotasAlimentosSnacksPerros}) => {
 
     await test.step('Click en Alimentos y Snacks para Perros', async () => {
         await menuHamburMascotasAlimentosSnacksPerros.navigateToMenuHamburMascotasAlimentosSnacksPerros()
     })
 })
-test('@Regression @MenuHamburguesa () Verificar que funciona correctamente al clickear en el Menu Mascotas: Higiene y Accesorios para Gatos', async ({menuHamburMascotasHigieneAccesoriosGatos}) => {
+test('@Regression @MenuHamburguesa (B2B-TC-174) Verificar que funciona correctamente al clickear en el Menu Mascotas: Higiene y Accesorios para Gatos', async ({menuHamburMascotasHigieneAccesoriosGatos}) => {
 
     await test.step('Click en Higiene y Accesorios para Gatos', async () => {
         await menuHamburMascotasHigieneAccesoriosGatos.navigateToMenuHamburMascotasHigieneAccesoriosGatos()
