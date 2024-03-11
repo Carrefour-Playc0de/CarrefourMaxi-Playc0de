@@ -9,7 +9,8 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, menuHamburguesa}) => {
     })
 })
 
-test('@Smoke @Regression (B2C-TC-1105) Verificar que al clickear en Menu Limpieza funciona correctamente', async ({menuHamburLimpieza}) => {
+
+test('@Smoke @Regression (B2B-TC-158) Verificar que al clickear en Menu Limpieza funciona correctamente', async ({menuHamburLimpieza}) => {
 
     await test.step('Click en Limpieza', async () => {
         await menuHamburLimpieza.navigateToMenuHamburLimpieza()

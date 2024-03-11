@@ -11,7 +11,7 @@ export class MenuHamburOfertas extends BasePage {
     }
 
     async mouseOverOfertas(): Promise<void> {
-        let selector = "(//div[@onclick=\"gotoPage('sale', '')\"][normalize-space()='Ofertas'])[1]"
+        let selector = "(//div[@onclick=\"gotoPage('sale', '', 'Ofertas')\"][normalize-space()='Ofertas'])[1]"
         await this.page.waitForSelector(selector)
         let element = await this.page.$(selector)
         await element?.hover()
