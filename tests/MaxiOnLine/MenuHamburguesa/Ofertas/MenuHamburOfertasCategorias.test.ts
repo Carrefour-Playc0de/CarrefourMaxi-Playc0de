@@ -12,13 +12,13 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, menuHamburguesa, menuHambu
     })
 })
 
-test('@Smoke @Regression @MenuHamburguesa (B2C-TC-1115) Verificar que funciona el Menu Ofertas: VER TODO', async ({menuHamburOfertasVerTodos}) => {
+test('@Smoke @Regression (B2B-TC-183) Verificar que funciona correctamente al clickear en el Menu Ofertas: VER TODO', async ({menuHamburOfertasVerTodos}) => {
 
     await test.step('Click en Ofertas VER TODO', async () => {
         await menuHamburOfertasVerTodos.navigateToMenuHamburOfertasVerTodos()
     })
 })
-test('@Regression @MenuHamburguesa (B2C-TC-1023) Verificar que funciona el Menu Ofertas: ESPECIALES DEL DIA', async ({menuHamburOfertasEspecialesDelDia}) => {
+test('@Regression @MenuHamburguesa (B2B-TC-184) Verificar que funciona correctamente al clickear en el Menu Ofertas: ESPECIALES DEL DIA', async ({menuHamburOfertasEspecialesDelDia}) => {
 
     await test.step('Click en ESPECIALES DEL DIA', async () => {
         await menuHamburOfertasEspecialesDelDia.navigateToMenuHamburOfertasEspecialesDelDia()
