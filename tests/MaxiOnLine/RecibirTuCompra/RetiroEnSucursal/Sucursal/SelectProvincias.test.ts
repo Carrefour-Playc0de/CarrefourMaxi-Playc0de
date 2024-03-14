@@ -15,37 +15,37 @@ test.beforeEach(async ({cerrarModalTeDamosBienvenida, ingresarCuenta, botonRetir
     })
 })
 
-test('@Smoke @Retiro @Regression (TS-05) Verificar que al clickear el select Provincia en BS AS (NORTE) funciona correctamente', async ({selectProvinciaBsAsNorte}) => {
+test('@Smoke @Retiro @Regression (B2B-TC-206) Verificar que al clickear el select Provincia en BS AS (NORTE) funciona correctamente', async ({selectProvinciaBsAsNorte}) => {
     await test.step('Click en el select Provincia en BS AS (NORTE)', async () => {
         await selectProvinciaBsAsNorte.navigateToSelectProvinciaBsAsNorte()
     })
 })
-test('@Retiro @Regression (TS-06) Verificar que al clickear el select Provincia en BS AS (OESTE) funciona correctamente', async ({selectProvinciaBsAsOeste}) => {
+test('@Retiro @Regression (B2B-TC-207) Verificar que al clickear el select Provincia en BS AS (OESTE) funciona correctamente', async ({selectProvinciaBsAsOeste}) => {
     await test.step('Click en el select Provincia en BS AS (OESTE)', async () => {
         await selectProvinciaBsAsOeste.navigateToSelectProvinciaBsAsOeste()
     })
 })
-test('@Retiro @Regression (TS-07) Verificar que al clickear el select Provincia en BS AS (SUR) funciona correctamente', async ({selectProvinciaBsAsSur}) => {
+test('@Retiro @Regression (B2B-TC-208) Verificar que al clickear el select Provincia en BS AS (SUR) funciona correctamente', async ({selectProvinciaBsAsSur}) => {
     await test.step('Click en el select Provincia en BS AS (SUR)', async () => {
         await selectProvinciaBsAsSur.navigateToSelectProvinciaBsAsSur()
     })
 })
-test('@Retiro @Regression (TS-08) Verificar que al clickear el select Provincia en CABA funciona correctamente', async ({selectProvinciaCABA}) => {
+test('@Retiro @Regression (B2B-TC-209) Verificar que al clickear el select Provincia en CABA funciona correctamente', async ({selectProvinciaCABA}) => {
     await test.step('Click en el select Provincia en CABA', async () => {
         await selectProvinciaCABA.navigateToSelectProvinciaCABA()
     })
 })
-test('@Retiro @Regression (TS-09) Verificar que al clickear el select Provincia en Catamarca funciona correctamente', async ({selectProvinciaCatamarca}) => {
+test('@Retiro @Regression (B2B-TC-210) Verificar que al clickear el select Provincia en Catamarca funciona correctamente', async ({selectProvinciaCatamarca}) => {
     await test.step('Click en el select Provincia en Catamarca', async () => {
         await selectProvinciaCatamarca.navigateToSelectProvinciaCatamarca()
     })
 })
-test('@Retiro @Regression (TS-10) Verificar que al clickear el select Provincia en Chaco funciona correctamente', async ({selectProvinciaChaco}) => {
+test('@Retiro @Regression (B2B-TC-211) Verificar que al clickear el select Provincia en Chaco funciona correctamente', async ({selectProvinciaChaco}) => {
     await test.step('Click en el select Provincia en Chaco', async () => {
         await selectProvinciaChaco.navigateToSelectProvinciaChaco()
     })
 })
-test('@Retiro @Regression (TS-11) Verificar que al clickear el select Provincia en Chubut funciona correctamente', async ({selectProvinciaChubut}) => {
+test('@Retiro @Regression (B2B-TC-212) Verificar que al clickear el select Provincia en Chubut funciona correctamente', async ({selectProvinciaChubut}) => {
     await test.step('Click en el select Provincia en Chubut', async () => {
         await selectProvinciaChubut.navigateToSelectProvinciaChubut()
     })
