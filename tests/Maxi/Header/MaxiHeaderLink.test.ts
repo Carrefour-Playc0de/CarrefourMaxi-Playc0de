@@ -6,31 +6,31 @@ test.beforeEach(async ({ navigateMaxiCarrefour }) => {
     })
 })
 
-test('@Regression @MaxiHeader (TS-31) Verificar que al clickear Folletos en el header de Maxi funciona correctamente', async ({maxiHeaderFolletosButton}) => {
+test('@Regression @MaxiHeader (B2B-TC-264) Verificar que al clickear el boton Folletos del header de Maxi funciona correctamente', async ({maxiHeaderFolletosButton}) => {
 
     await test.step('Click en Folletos', async () => {
         await maxiHeaderFolletosButton.clickMaxiHeaderFolletosButton()
     })
 })
-test('@Regression @MaxiHeader (TS-31) Verificar que al clickear Sucursales en el header de Maxi funciona correctamente', async ({maxiHeaderSucursalesButton}) => {
+test('@Regression @MaxiHeader (B2B-TC-265) Verificar que al clickear el boton Sucursales del header de Maxi funciona correctamente', async ({maxiHeaderSucursalesButton}) => {
 
     await test.step('Click en Sucursales', async () => {
         await maxiHeaderSucursalesButton.clickMaxiHeaderSucursalesButton()
     })
 })
-test('@Regression @MaxiHeader (TS-31) Verificar que al clickear Quiero Folleto en el header de Maxi funciona correctamente', async ({maxiHeaderQuieroFolletoButton}) => {
+test('@Regression @MaxiHeader (B2B-TC-266) Verificar que al clickear el boton Quiero Folleto del header de Maxi funciona correctamente', async ({maxiHeaderQuieroFolletoButton}) => {
 
     await test.step('Click en Quiero Folleto', async () => {
         await maxiHeaderQuieroFolletoButton.clickMaxiHeaderQuieroFolletoButton()
     })
 })
-test('@Regression @MaxiHeader (TS-31) Verificar que al clickear Quiero Terminal de Cobro en el header de Maxi funciona correctamente', async ({maxiHeaderQuieroTerminalCobroButton}) => {
+test('@Regression @MaxiHeader (B2B-TC-267) Verificar que al clickear el boton Quiero Terminal de Cobro del header de Maxi funciona correctamente', async ({maxiHeaderQuieroTerminalCobroButton}) => {
 
     await test.step('Click en Quiero Terminal de Cobro', async () => {
         await maxiHeaderQuieroTerminalCobroButton.clickMaxiHeaderQuieroTerminalCobroButton()
     })
 })
-test('@Regression @MaxiHeader (TS-31) Verificar que al clickear Compra Online en el header de Maxi funciona correctamente', async ({maxiHeaderCompraOnlineButton}) => {
+test('@Regression @MaxiHeader (B2B-TC-268) Verificar que al clickear el boton Compra Online del header de Maxi funciona correctamente', async ({maxiHeaderCompraOnlineButton}) => {
 
     await test.step('Click en Compra Online', async () => {
         await maxiHeaderCompraOnlineButton.clickMaxiHeaderCompraOnlineButton()

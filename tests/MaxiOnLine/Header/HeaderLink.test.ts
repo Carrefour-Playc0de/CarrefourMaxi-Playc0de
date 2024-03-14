@@ -6,19 +6,19 @@ test.beforeEach(async ({ cerrarModalTeDamosBienvenida }) => {
     })
 })
 
-test('@Regression @Header (TS-31) Verificar que al clickear ELEGI LA FORMA DE ENTREGA en el header funciona correctamente', async ({headerElegiFormaEntrega}) => {
+test('@Regression @Header (B2B-TC-261) Verificar que al clickear el link ELEGI LA FORMA DE ENTREGA en el header se direcciona correctamente', async ({headerElegiFormaEntrega}) => {
 
     await test.step('Click en ELEGI LA FORMA DE ENTREGA', async () => {
         await headerElegiFormaEntrega.navigateToHeaderElegiFormaEntrega()
     })
 })
-test('@Regression @Header (TS-31) Verificar que al clickear Folletos en el header funciona correctamente', async ({headerFolletos}) => {
+test('@Regression @Header (B2B-TC-262) Verificar que al clickear el link Folletos en el header se direcciona correctamente', async ({headerFolletos}) => {
 
     await test.step('Click en Folletos', async () => {
         await headerFolletos.navigateToHeaderFolletos()
     })
 })
-test('@Regression @Header (TS-31) Verificar que al clickear Sucursales en el header funciona correctamente', async ({headerSucursales}) => {
+test('@Regression @Header (B2B-TC-263) Verificar que al clickear el link Sucursales en el header se direcciona correctamente', async ({headerSucursales}) => {
 
     await test.step('Click en Sucursales', async () => {
         await headerSucursales.navigateToHeaderSucursales()
